@@ -1,12 +1,13 @@
 import firebase from 'firebase';
+import * as config_file from './config';
 
 const config = {
-  apiKey: "AIzaSyCzUDpQ1RnSYH3kdmvRRviNQEzyCUv6FQo",
-  authDomain: "rocketplanet-d5934.firebaseapp.com",
-  databaseURL: "https://rocketplanet-d5934.firebaseio.com",
-  projectId: "rocketplanet-d5934",
-  storageBucket: "rocketplanet-d5934.appspot.com",
-  messagingSenderId: "543879339561"
+  apiKey: config_file.apiKey,
+  authDomain: config_file.authDomain,
+  databaseURL: config_file.databaseURL,
+  projectId: config_file.projectId,
+  storageBucket: config_file.storageBucket,
+  messagingSenderId: config_file.messagingSenderId
 };
 
 firebase.initializeApp(config);

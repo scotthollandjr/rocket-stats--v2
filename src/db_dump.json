@@ -1,0 +1,211 @@
+{
+  "games" : {
+    "-L0mte-js_7aTlH5wO0A" : {
+      "team_1" : {
+        "id" : 11,
+        "win" : true,
+        "player_1" : {
+          "assists" : 0,
+          "goals" : 4,
+          "id" : 5,
+          "mvp" : true,
+          "saves" : 0,
+          "score" : 430,
+          "shots" : 4,
+          "win" : true
+        },
+        "player_2" : {
+          "assists" : 2,
+          "goals" : 2,
+          "id" : 1,
+          "mvp" : false,
+          "saves" : 1,
+          "score" : 350,
+          "shots" : 5,
+          "win" : true
+        }
+      },
+      "team_2" : {
+        "id" : 8,
+        "win" : false,
+        "player_1" : {
+          "assists" : 0,
+          "goals" : 1,
+          "id" : 4,
+          "mvp" : false,
+          "saves" : 1,
+          "score" : 180,
+          "shots" : 1,
+          "win" : false
+        },
+        "player_2" : {
+          "assists" : 0,
+          "goals" : 0,
+          "id" : 2,
+          "mvp" : false,
+          "saves" : 0,
+          "score" : 75,
+          "shots" : 1,
+          "win" : false
+        }
+      }
+    },
+    "-L0mte-js_7aTlH5wO0B" : {
+      "team_1" : {
+        "id" : 2,
+        "win" : true,
+        "player_1" : {
+          "assists" : 1,
+          "goals" : 4,
+          "id" : 1,
+          "mvp" : true,
+          "saves" : 0,
+          "score" : 510,
+          "shots" : 6,
+          "win" : true
+        },
+        "player_2" : {
+          "assists" : 1,
+          "goals" : 1,
+          "id" : 2,
+          "mvp" : false,
+          "saves" : 0,
+          "score" : 170,
+          "shots" : 2,
+          "win" : true
+        }
+      },
+      "team_2" : {
+        "id" : 14,
+        "win" : false,
+        "player_1" : {
+          "assists" : 1,
+          "goals" : 3,
+          "id" : 4,
+          "mvp" : false,
+          "saves" : 1,
+          "score" : 370,
+          "shots" : 2,
+          "win" : false
+        },
+        "player_2" : {
+          "assists" : 1,
+          "goals" : 1,
+          "id" : 5,
+          "mvp" : false,
+          "saves" : 0,
+          "score" : 155,
+          "shots" : 2,
+          "win" : false
+        }
+      }
+    }
+  },
+  "players" : [ {
+    "id" : 0,
+    "name" : "clayton"
+  }, {
+    "id" : 1,
+    "name" : "jeremy"
+  }, {
+    "id" : 2,
+    "name" : "josh"
+  }, {
+    "id" : 3,
+    "name" : "katie"
+  }, {
+    "id" : 4,
+    "name" : "sasha"
+  }, {
+    "id" : 5,
+    "name" : "scott"
+  }, {
+    "id" : 6,
+    "name" : "bot"
+  } ],
+  "teams" : [ {
+    "id" : 0,
+    "name" : "Kanye Fresh",
+    "players" : [ 0, 1 ]
+  }, {
+    "id" : 1,
+    "name" : "Before it was cool",
+    "players" : [ 2, 0 ]
+  }, {
+    "id" : 2,
+    "name" : "The Jazzy J's",
+    "players" : [ 2, 1 ]
+  }, {
+    "id" : 3,
+    "name" : "Drup Group",
+    "players" : [ 3, 0 ]
+  }, {
+    "id" : 4,
+    "name" : "Los Judios Rojos",
+    "players" : [ 3, 1 ]
+  }, {
+    "id" : 5,
+    "name" : "Katie + Josh",
+    "players" : [ 3, 2 ]
+  }, {
+    "id" : 6,
+    "name" : "The Vultures",
+    "players" : [ 4, 0 ]
+  }, {
+    "id" : 7,
+    "name" : "Babushkas",
+    "players" : [ 4, 1 ]
+  }, {
+    "id" : 8,
+    "name" : "Dangerous Dynamos",
+    "players" : [ 4, 2 ]
+  }, {
+    "id" : 9,
+    "name" : "Sasha + Katie",
+    "players" : [ 4, 3 ]
+  }, {
+    "id" : 10,
+    "name" : "Bash Bros",
+    "players" : [ 5, 0 ]
+  }, {
+    "id" : 11,
+    "name" : "Team Tendies",
+    "players" : [ 5, 1 ]
+  }, {
+    "id" : 12,
+    "name" : "Underdogs",
+    "players" : [ 5, 2 ]
+  }, {
+    "id" : 13,
+    "name" : "Scott Holland Jr.'s",
+    "players" : [ 5, 3 ]
+  }, {
+    "id" : 14,
+    "name" : "PowurCoin (BIGPP)",
+    "players" : [ 5, 4 ]
+  }, {
+    "id" : 15,
+    "name" : "Columbine",
+    "players" : [ 0, 6 ]
+  }, {
+    "id" : 16,
+    "name" : "Rajput",
+    "players" : [ 1, 6 ]
+  }, {
+    "id" : 17,
+    "name" : "Josh + bot",
+    "players" : [ 2, 6 ]
+  }, {
+    "id" : 18,
+    "name" : "Katie + bot",
+    "players" : [ 3, 6 ]
+  }, {
+    "id" : 19,
+    "name" : "Sasha + bot",
+    "players" : [ 4, 6 ]
+  }, {
+    "id" : 20,
+    "name" : "Myrtle, Inc.",
+    "players" : [ 5, 6 ]
+  } ]
+}
