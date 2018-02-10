@@ -1,3 +1,5 @@
 export default {
-  games: []
+  games: {},
+  players: {},
+  teams: {},
 };

@@ -1,29 +1,35 @@
-import * as allActions from './allActions';
+import * as actionTypes from './actionTypes';
+import database from '../database';
 
-export function receiveGames(data) {
-  return {type: allActions.RECEIVE_GAMES, games: data};
+function fetchGamesRequestedAction() {
+  return {
+    type: actionTypes.GET_GAMES_REQUESTED
+  };
+}
+
+function fetchGamesRejectedAction() {
+  return {
+    type: actionTypes.GET_GAMES_REJECTED
+  }
+}
+
+function fetchGamesFulfilledAction(games) {
+  return {
+    type: actionTypes.GET_GAMES_FULFILLED,
+    games
+  };
 }
 
 export function fetchGames() {
   return dispatch => {
-    fetch('https://jsonplaceholder.typicode.com/todos')
-      .then(response =>
-        response.json().then(data => ({
-          data: data,
-          status: response.status
-        }))
-      )
-      .then(response => {
-        if(response.status === 200) {
-          dispatch(receiveGames(response.data))
-        } else {
-          var flash = {
-            type: 'error',
-            title: 'Error getting data',
-            content: 'This is an error.'
-          }
-          dispatch({type: "DISPLAY_FLASH", data: flash})
-        }
-      });
-  };
+    dispatch(fetchGamesRequestedAction());
+    return database.ref('/games').once('value', snap => {
+      const games = snap.val();
+      dispatch(fetchGamesFulfilledAction(games))
+    })
+    .catch((error) => {
+      console.log(error);
+      dispatch(fetchGamesRejectedAction());
+    })
+  }
 }

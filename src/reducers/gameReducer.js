@@ -1,15 +1,19 @@
 import initialState from './initialState';
-import {FETCH_GAMES, RECEIVE_GAMES} from '../actions/allActions';
+import {
+  GET_GAMES_FULFILLED,
+  GET_GAMES_REJECTED,
+  GET_GAMES_REQUESTED,
+} from '../actions/actionTypes';
 
 export default function games(state = initialState.games, action) {
   let newState;
   switch (action.type) {
-    case FETCH_GAMES:
-      console.log('FETCH_GAMES Action')
-      return action;
-    case RECEIVE_GAMES:
+    case GET_GAMES_REJECTED:
+      return state;
+    case GET_GAMES_REQUESTED:
+      return state;
+    case GET_GAMES_FULFILLED:
       newState = action.games;
-      console.log('RECEIVE_GAMES Action')
       return newState;
     default:
       return state;

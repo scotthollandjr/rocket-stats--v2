@@ -1,12 +1,16 @@
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 import * as gameActions from '../actions/gameActions';
+import * as playerActions from '../actions/playerActions';
+import * as teamActions from '../actions/teamActions';
 import PropTypes from 'prop-types';
 import React from 'react';
 
 class gameList extends React.Component {
   componentWillMount() {
     this.props.gameActions.fetchGames();
+    this.props.playerActions.fetchPlayers();
+    this.props.teamActions.fetchTeams();
   }
 
   renderData(item) {
@@ -23,13 +27,7 @@ class gameList extends React.Component {
     } else {
       return (
         <div>
-          {
-            this.props.games.map((item, index) => {
-              return (
-                this.renderData(item)
-              );
-            })
-          }
+
         </div>
       )
     }
@@ -38,18 +36,23 @@ class gameList extends React.Component {
 
 gameList.propTypes = {
   gameActions: PropTypes.object,
-  games: PropTypes.array
+  playerActions: PropTypes.object,
+  teamActions: PropTypes.object,
 };
 
 function mapStateToProps(state) {
   return {
-    games: state.games
+    games: state.games,
+    players: state.players,
+    teams: state.teams,
   };
 }
 
 function mapDispactToProps(dispatch) {
   return {
-    gameActions: bindActionCreators(gameActions, dispatch)
+    gameActions: bindActionCreators(gameActions, dispatch),
+    playerActions: bindActionCreators(playerActions, dispatch),
+    teamActions: bindActionCreators(teamActions, dispatch),
   };
 }
 
