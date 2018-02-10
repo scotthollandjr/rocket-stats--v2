@@ -3,10 +3,91 @@ import {bindActionCreators} from 'redux';
 import * as gameActions from '../actions/gameActions';
 import * as playerActions from '../actions/playerActions';
 import * as teamActions from '../actions/teamActions';
+import { addGame } from '../actions/addGameActions';
 import PropTypes from 'prop-types';
 import React from 'react';
 
 class gameList extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      game: {
+        team_1: {
+          id: 0,
+          win: true,
+          player_1: {
+            assists: 0,
+            goals: 0,
+            id: 0,
+            mvp: true,
+            saves: 0,
+            score: 0,
+            shots: 0,
+            win: true
+          },
+          player_2: {
+            assists: 0,
+            goals: 0,
+            id: 0,
+            mvp: false,
+            saves: 0,
+            score: 0,
+            shots: 0,
+            win: true
+          }
+        },
+        team_2: {
+          id: 0,
+          win: false,
+          player_1: {
+            assists: 0,
+            goals: 0,
+            id: 0,
+            mvp: false,
+            saves: 0,
+            score: 0,
+            shots: 0,
+            win: false
+          },
+          player_2: {
+            assists: 0,
+            goals: 0,
+            id: 0,
+            mvp: false,
+            saves: 0,
+            score: 0,
+            shots: 0,
+            win: false
+          }
+        }
+      }
+    };
+
+    // this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
+
+  handlePlayerChange(key, event) {
+    event.persist()
+    this.setState(prevState => ({
+      ...prevState,
+      game: {
+        ...prevState.game,
+        team_1: {
+          ...prevState.game.team_1,
+          player_1: {
+            ...prevState.game.team_1.player_1,
+            [key]: event.target.value
+          }
+        }
+      }
+    }))
+  }
+
+  handleSubmit(event) {
+    this.props.onAddGame(this.state.game)
+  }
+
   componentWillMount() {
     this.props.gameActions.fetchGames();
     this.props.playerActions.fetchPlayers();
@@ -41,7 +122,7 @@ class gameList extends React.Component {
            </div>;
   }
 
-  render() {
+  renderLater() {
     if (!Object.keys(this.props.games).length || !Object.keys(this.props.players).length || !Object.keys(this.props.teams).length) {
       return (
         <div>
@@ -82,6 +163,26 @@ class gameList extends React.Component {
       )
     }
   }
+
+  render() {
+    return (
+      <form onSubmit={this.handleSubmit}>
+        <div>
+          <div>
+            <b>Assists:</b>
+            <input
+            type="number"
+            defaultValue={this.state.game.team_1.player_1.assists}
+            onChange={(e) => this.handlePlayerChange('assists', e)}
+            />
+          </div>
+          <div>
+            <input type="submit" value="Add Game!" />
+          </div>
+        </div>
+      </form>
+    )
+  }
 }
 
 gameList.propTypes = {
@@ -103,6 +204,7 @@ function mapDispactToProps(dispatch) {
     gameActions: bindActionCreators(gameActions, dispatch),
     playerActions: bindActionCreators(playerActions, dispatch),
     teamActions: bindActionCreators(teamActions, dispatch),
+    onAddGame: (name) => dispatch(addGame(name)),
   };
 }
 
