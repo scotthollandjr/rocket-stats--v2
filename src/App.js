@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
-import Container from './components/container';
-import GameForm from './components/gameForm';
-import { Link, Route, Redirect } from 'react-router-dom';
+import { Container, GameForm } from './components';
+import { Link, Route, Redirect, Switch } from 'react-router-dom';
 import './App.scss';
 
 class App extends Component {
@@ -13,9 +12,11 @@ class App extends Component {
           <Link to="/form">Form</Link>
         </nav>
         <div>
-          <Route path="/stats" component={Container} />
-          <Route exact path="/form" component={GameForm} />
-          <Redirect from="/" to="/stats" />
+          <Switch>
+            <Route path="/stats" component={Container} />
+            <Route exact path="/form" component={GameForm} />
+            <Redirect from="/" to="/stats" />
+          </Switch>
         </div>
       </div>
     );

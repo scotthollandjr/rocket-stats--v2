@@ -1,6 +1,6 @@
 import React from 'react';
 
-class gameList extends React.Component {
+class GameList extends React.Component {
 
   renderGames(game, i) {
     return (
@@ -46,4 +46,4 @@ class gameList extends React.Component {
   }
 }
 
-export default gameList
+export { GameList };

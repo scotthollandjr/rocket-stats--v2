@@ -1,6 +1,6 @@
 import React from 'react';
 
-class teamList extends React.Component {
+class TeamList extends React.Component {
 
   renderTeams(item, i) {
     return <div key={i}>
@@ -34,4 +34,4 @@ class teamList extends React.Component {
   }
 }
 
-export default teamList
+export { TeamList };

@@ -1,13 +1,13 @@
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
-import * as gameActions from '../actions/gameActions';
-import * as playerActions from '../actions/playerActions';
-import * as teamActions from '../actions/teamActions';
-import { addGame } from '../actions/addGameActions';
+import * as gameActions from '../../actions/gameActions';
+import * as playerActions from '../../actions/playerActions';
+import * as teamActions from '../../actions/teamActions';
+import { addGame } from '../../actions/addGameActions';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-class gameForm extends React.Component {
+class GameFormComponent extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -222,7 +222,7 @@ class gameForm extends React.Component {
   }
 }
 
-gameForm.propTypes = {
+GameFormComponent.propTypes = {
   gameActions: PropTypes.object,
   playerActions: PropTypes.object,
   teamActions: PropTypes.object,
@@ -245,7 +245,9 @@ function mapDispactToProps(dispatch) {
   };
 }
 
-export default connect(
+const GameForm = connect(
   mapStateToProps,
   mapDispactToProps
-)(gameForm);
+)(GameFormComponent)
+
+export { GameForm };

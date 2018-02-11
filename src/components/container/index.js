@@ -1,18 +1,15 @@
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
-import * as gameActions from '../actions/gameActions';
-import * as playerActions from '../actions/playerActions';
-import * as teamActions from '../actions/teamActions';
-import { addGame } from '../actions/addGameActions';
+import * as gameActions from '../../actions/gameActions';
+import * as playerActions from '../../actions/playerActions';
+import * as teamActions from '../../actions/teamActions';
+import { addGame } from '../../actions/addGameActions';
 import PropTypes from 'prop-types';
 import React from 'react';
-import GameForm from './gameForm';
-import TeamList from './teamList';
-import PlayerList from './playerList';
-import GameList from './gameList';
-import { Link, Route, Redirect } from 'react-router-dom';
+import { GameForm, GameList, PlayerList, TeamList } from '../index';
+import { Link, Route, Redirect, Switch } from 'react-router-dom';
 
-class container extends React.Component {
+class ContainerComponent extends React.Component {
   constructor(props) {
     super(props);
   }
@@ -40,13 +37,15 @@ class container extends React.Component {
             <Link to="/stats/teams">Teams</Link>
             <Link to="/stats/players">Players</Link>
           </nav>
-          <Route path="/stats/games" render={()=><GameList
-            teams={this.props.teams} players={this.props.players}
-            games={this.props.games}/>}/>
-          <Route path="/stats/teams" render={()=><TeamList
-            teams={this.props.teams} players={this.props.players}/>}/>
-          <Route path="/stats/players" render={()=><PlayerList players={this.props.players}/>}/>
-          <Redirect from="/stats" to="/stats/games" />
+          <Switch>
+            <Route path="/stats/games" render={()=><GameList
+              teams={this.props.teams} players={this.props.players}
+              games={this.props.games}/>}/>
+            <Route path="/stats/teams" render={()=><TeamList
+              teams={this.props.teams} players={this.props.players}/>}/>
+            <Route path="/stats/players" render={()=><PlayerList players={this.props.players}/>}/>
+            <Redirect from="/stats" to="/stats/games" />
+          </Switch>
         </div>
       )
     }
@@ -54,7 +53,7 @@ class container extends React.Component {
 }
 
 
-container.propTypes = {
+ContainerComponent.propTypes = {
   gameActions: PropTypes.object,
   playerActions: PropTypes.object,
   teamActions: PropTypes.object,
@@ -77,7 +76,9 @@ function mapDispactToProps(dispatch) {
   };
 }
 
-export default connect(
+const Container = connect(
   mapStateToProps,
   mapDispactToProps
-)(container);
+)(ContainerComponent);
+
+export { Container };

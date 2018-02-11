@@ -1,6 +1,6 @@
 import React from 'react';
 
-class playerList extends React.Component {
+class PlayerList extends React.Component {
 
   renderPlayers(item, i) {
     return <div key={i}>
@@ -34,4 +34,4 @@ class playerList extends React.Component {
   }
 }
 
-export default playerList
+export { PlayerList };
