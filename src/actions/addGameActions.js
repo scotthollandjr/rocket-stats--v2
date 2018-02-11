@@ -5,13 +5,12 @@ export function addGame(game) {
   return dispatch => {
     dispatch(addGameRequestedAction());
     const gamesRef = database.ref('/games');
-    console.log('addGame game', game)
-    const fakeGame = 'fake';
     gamesRef.push({
-      game
+      team_1: game.team_1,
+      team_2: game.team_2,
     })
     .then(() => {
-      dispatch(addGameRequestedAction({ game }));
+      dispatch(addGameRequestedAction({game}));
     })
     .catch((error) => {
       dispatch(addGameRequestedAction());
