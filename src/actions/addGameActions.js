@@ -5,7 +5,8 @@ export function addGame(game) {
   return dispatch => {
     dispatch(addGameRequestedAction());
     const gamesRef = database.ref('/games');
-    console.log("game", game)
+    console.log('addGame game', game)
+    const fakeGame = 'fake';
     gamesRef.push({
       game
     })
