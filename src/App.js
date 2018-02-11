@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Container from './components/container';
 import GameForm from './components/gameForm';
 import { Link, Route, Redirect } from 'react-router-dom';
+import './App.scss';
 
 class App extends Component {
   render() {
