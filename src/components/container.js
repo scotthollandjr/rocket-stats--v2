@@ -10,6 +10,7 @@ import GameForm from './gameForm';
 import TeamList from './teamList';
 import PlayerList from './playerList';
 import GameList from './gameList';
+import { Link, Route, Redirect } from 'react-router-dom';
 
 class container extends React.Component {
   constructor(props) {
@@ -22,6 +23,8 @@ class container extends React.Component {
     this.props.teamActions.fetchTeams();
   }
 
+  calculateStats() {}
+
   render() {
     if (!Object.keys(this.props.games).length || !Object.keys(this.props.players).length || !Object.keys(this.props.teams).length) {
       return (
@@ -32,14 +35,18 @@ class container extends React.Component {
     } else {
       return (
         <div>
-          <GameForm />
-          <GameList
-          teams={this.props.teams} players={this.props.players}
-          games={this.props.games} />
-          <PlayerList
-          players={this.props.players} />
-          <TeamList
-          teams={this.props.teams} players={this.props.players}/>
+          <nav>
+            <Link to="/stats/games">Games</Link>
+            <Link to="/stats/teams">Teams</Link>
+            <Link to="/stats/players">Players</Link>
+          </nav>
+          <Route path="/stats/games" render={()=><GameList
+            teams={this.props.teams} players={this.props.players}
+            games={this.props.games}/>}/>
+          <Route path="/stats/teams" render={()=><TeamList
+            teams={this.props.teams} players={this.props.players}/>}/>
+          <Route path="/stats/players" render={()=><PlayerList players={this.props.players}/>}/>
+          <Redirect from="/stats" to="/stats/games" />
         </div>
       )
     }
