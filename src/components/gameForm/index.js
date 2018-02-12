@@ -153,7 +153,7 @@ class GameFormComponent extends React.Component {
   render() {
     return (
       <form onSubmit={this.buildGame}>
-        <div className="form-container">
+        <div className="game-container">
           <div className="player-rows">
             <div className="team-name blue">
               {this.props.teams[this.state.team_1.id] ? this.props.teams[this.state.team_1.id].name : 'Blue'}
@@ -177,6 +177,7 @@ class GameFormComponent extends React.Component {
                   </select>
                 </div>
                 <div className="input-square">
+                  <div className="label">score</div>
                   <input
                   type="number"
                   value={player.score}
@@ -185,6 +186,7 @@ class GameFormComponent extends React.Component {
                   />
                 </div>
                 <div className="input-square">
+                  <div className="label">goals</div>
                   <input
                   type="number"
                   value={player.goals}
@@ -193,6 +195,7 @@ class GameFormComponent extends React.Component {
                   />
                 </div>
                 <div className="input-square">
+                  <div className="label">assists</div>
                   <input
                   type="number"
                   value={player.assists}
@@ -201,6 +204,7 @@ class GameFormComponent extends React.Component {
                   />
                 </div>
                 <div className="input-square">
+                  <div className="label">saves</div>
                   <input
                   type="number"
                   value={player.saves}
@@ -209,6 +213,7 @@ class GameFormComponent extends React.Component {
                   />
                 </div>
                 <div className="input-square">
+                  <div className="label">shots</div>
                   <input
                   type="number"
                   value={player.shots}
@@ -216,8 +221,7 @@ class GameFormComponent extends React.Component {
                   onChange={this.handlePlayerChange(playerIndex, 'shots')}
                   />
                 </div>
-                <div className="empty-square">
-                </div>
+                <div className="empty-square"></div>
                 <br />
                 <br />
               </div>
@@ -246,6 +250,7 @@ class GameFormComponent extends React.Component {
                   </select>
                 </div>
                 <div className="input-square">
+                  <div className="label">score</div>
                   <input
                   type="number"
                   value={player.score}
@@ -254,6 +259,7 @@ class GameFormComponent extends React.Component {
                   />
                 </div>
                 <div className="input-square">
+                  <div className="label">goals</div>
                   <input
                   type="number"
                   value={player.goals}
@@ -262,6 +268,7 @@ class GameFormComponent extends React.Component {
                   />
                 </div>
                 <div className="input-square">
+                  <div className="label">number</div>
                   <input
                   type="number"
                   value={player.assists}
@@ -270,6 +277,7 @@ class GameFormComponent extends React.Component {
                   />
                 </div>
                 <div className="input-square">
+                  <div className="label">saves</div>
                   <input
                   type="number"
                   value={player.saves}
@@ -278,6 +286,7 @@ class GameFormComponent extends React.Component {
                   />
                 </div>
                 <div className="input-square">
+                  <div className="label">shots</div>
                   <input
                   type="number"
                   value={player.shots}

@@ -18,7 +18,6 @@ class TeamList extends React.Component {
     } else {
       return (
         <div>
-          <h3>Teams</h3>
           <div>
           {
             Object.keys(this.props.teams).map((team, i) => {
