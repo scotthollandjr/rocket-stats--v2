@@ -43,7 +43,8 @@ class GameFormComponent extends React.Component {
           saves: '',
           score: '',
           shots: '',
-          win: true
+          win: true,
+          blue: true
         },
         {
           assists: '',
@@ -53,7 +54,8 @@ class GameFormComponent extends React.Component {
           saves: '',
           score: '',
           shots: '',
-          win: true
+          win: true,
+          blue: true
         },
         {
           assists: '',
@@ -63,7 +65,8 @@ class GameFormComponent extends React.Component {
           saves: '',
           score: '',
           shots: '',
-          win: false
+          win: false,
+          blue: false
         },
         {
           assists: '',
@@ -73,7 +76,8 @@ class GameFormComponent extends React.Component {
           saves: '',
           score: '',
           shots: '',
-          win: false
+          win: false,
+          blue: false
         }
       ]
     };
@@ -149,17 +153,20 @@ class GameFormComponent extends React.Component {
   render() {
     return (
       <form onSubmit={this.buildGame}>
-        <h3>New Game</h3>
-        <div>
-          <p>TEAM 1: {this.props.teams[this.state.team_1.id] ? this.props.teams[this.state.team_1.id].name : 'team 1'}</p>
-          <p>TEAM 2: {this.props.teams[this.state.team_2.id] ? this.props.teams[this.state.team_2.id].name : 'team 2'}</p>
-          <div>
-            {this.state.players.map((player, playerIndex) => (
-              <div key={playerIndex}>
-                <div>
-                  <b>PLAYER:</b>
+        <div className="form-container">
+          <div className="player-rows">
+            <div className="team-name blue">
+              {this.props.teams[this.state.team_1.id] ? this.props.teams[this.state.team_1.id].name : 'Blue'}
+            </div>
+            {this.state.players.filter(player => {
+              return this.state.players.indexOf(player) <= 1
+            }).map((player, playerIndex) => (
+              <div key={playerIndex} className="player-row blue">
+                <div className="photo-square">
+                </div>
+                <div className="select-square">
                   <select value={player.id} onChange={this.handlePlayerChange(playerIndex, 'id')}>
-                    <option></option>
+                    <option>PLAYER</option>
                     {
                       Object.keys(this.props.players).map((i) => {
                         return (
@@ -169,54 +176,125 @@ class GameFormComponent extends React.Component {
                     }
                   </select>
                 </div>
-                <div>
-                  <b>SCORE:</b>
+                <div className="input-square">
                   <input
                   type="number"
                   value={player.score}
+                  placeholder="0"
                   onChange={this.handlePlayerChange(playerIndex, 'score')}
                   />
                 </div>
-                <div>
-                  <b>GOALS:</b>
+                <div className="input-square">
                   <input
                   type="number"
                   value={player.goals}
+                  placeholder="0"
                   onChange={this.handlePlayerChange(playerIndex, 'goals')}
                   />
                 </div>
-                <div>
-                  <b>ASSISTS:</b>
+                <div className="input-square">
                   <input
                   type="number"
                   value={player.assists}
+                  placeholder="0"
                   onChange={this.handlePlayerChange(playerIndex, 'assists')}
                   />
                 </div>
-                <div>
-                  <b>SAVES:</b>
+                <div className="input-square">
                   <input
                   type="number"
                   value={player.saves}
+                  placeholder="0"
                   onChange={this.handlePlayerChange(playerIndex, 'saves')}
                   />
                 </div>
-                <div>
-                  <b>SHOTS:</b>
+                <div className="input-square">
                   <input
                   type="number"
                   value={player.shots}
+                  placeholder="0"
                   onChange={this.handlePlayerChange(playerIndex, 'shots')}
                   />
+                </div>
+                <div className="empty-square">
                 </div>
                 <br />
                 <br />
               </div>
             ))}
           </div>
-          <div>
-            <input type="submit" value="Add Game!" />
+          <div className="player-rows">
+            <div className="team-name orange">
+              {this.props.teams[this.state.team_1.id] ? this.props.teams[this.state.team_1.id].name : 'Orange'}
+            </div>
+            {this.state.players.filter(player => {
+              return this.state.players.indexOf(player) >= 2
+            }).map((player, playerIndex) => (
+              <div key={playerIndex} className="player-row orange">
+                <div className="photo-square">
+                </div>
+                <div className="select-square">
+                  <select value={player.id} onChange={this.handlePlayerChange(playerIndex, 'id')}>
+                    <option>PLAYER</option>
+                    {
+                      Object.keys(this.props.players).map((i) => {
+                        return (
+                          <option key={i + 1} value={this.props.players[i].id}>{this.props.players[i].name}</option>
+                        )
+                      }, this)
+                    }
+                  </select>
+                </div>
+                <div className="input-square">
+                  <input
+                  type="number"
+                  value={player.score}
+                  placeholder="0"
+                  onChange={this.handlePlayerChange(playerIndex, 'score')}
+                  />
+                </div>
+                <div className="input-square">
+                  <input
+                  type="number"
+                  value={player.goals}
+                  placeholder="0"
+                  onChange={this.handlePlayerChange(playerIndex, 'goals')}
+                  />
+                </div>
+                <div className="input-square">
+                  <input
+                  type="number"
+                  value={player.assists}
+                  placeholder="0"
+                  onChange={this.handlePlayerChange(playerIndex, 'assists')}
+                  />
+                </div>
+                <div className="input-square">
+                  <input
+                  type="number"
+                  value={player.saves}
+                  placeholder="0"
+                  onChange={this.handlePlayerChange(playerIndex, 'saves')}
+                  />
+                </div>
+                <div className="input-square">
+                  <input
+                  type="number"
+                  value={player.shots}
+                  placeholder="0"
+                  onChange={this.handlePlayerChange(playerIndex, 'shots')}
+                  />
+                </div>
+                <div className="empty-square">
+                </div>
+                <br />
+                <br />
+              </div>
+            ))}
           </div>
+        </div>
+        <div className="button-container">
+          <input className="submit-button" type="submit" value="submit" />
         </div>
       </form>
     )
