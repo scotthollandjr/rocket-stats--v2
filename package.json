@@ -64,7 +64,7 @@
     "sass-loader": "^6.0.6"
   },
   "author": "",
-  "homepage": "https://scotthollandjr.github.io/rocket-stats--v2/",
+  "homepage": "https://rocketpla.net",
   "license": "ISC",
   "jest": {
     "collectCoverageFrom": [

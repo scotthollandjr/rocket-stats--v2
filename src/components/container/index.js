@@ -7,7 +7,8 @@ import { addGame } from '../../actions/addGameActions';
 import PropTypes from 'prop-types';
 import React from 'react';
 import { GameForm, GameList, PlayerList, TeamList } from '../index';
-import { Link, Route, Redirect, Switch } from 'react-router-dom';
+import { Link, NavLink, Route, Redirect, Switch } from 'react-router-dom';
+import './styles.scss';
 
 class ContainerComponent extends React.Component {
   constructor(props) {
@@ -31,11 +32,35 @@ class ContainerComponent extends React.Component {
       )
     } else {
       return (
-        <div>
+        <div className="menu">
           <nav>
-            <Link to="/stats/games">Games</Link>
-            <Link to="/stats/teams">Teams</Link>
-            <Link to="/stats/players">Players</Link>
+            <div className="nav-link">
+              <NavLink to="/stats/games" exact={true} activeClassName="active">
+                <div className="outer-a">
+                  <div className="inner-a">
+                    Games
+                  </div>
+                </div>
+              </NavLink>
+            </div>
+            <div className="nav-link">
+              <NavLink to="/stats/teams" exact={true} activeClassName="active">
+                <div className="outer-a">
+                  <div className="inner-a">
+                    Teams
+                  </div>
+                </div>
+              </NavLink>
+            </div>
+            <div className="nav-link">
+              <NavLink to="/stats/players" exact={true} activeClassName="active">
+                <div className="outer-a">
+                    <div className="inner-a">
+                      Players
+                    </div>
+                </div>
+              </NavLink>
+            </div>
           </nav>
           <Switch>
             <Route path="/stats/games" render={()=><GameList
