@@ -2,12 +2,15 @@
   nav {
     display: flex;
     flex-direction: column;
-    max-width: 250px;
     margin-bottom: 25px;
+    // align-items: flex-end;
 
     .nav-link {
-      a {
+      width: 250px;
+      // margin-right: 15px;
+      // text-align: right;
 
+      a {
         .outer-a {
           width: 100%;
           background: rgba(20, 20, 20, 0.9);
@@ -24,7 +27,7 @@
 
           .inner-a {
             transform: skew(25deg);
-            margin-left: 10px;
+            margin-right: 15px;
           }
         }
 

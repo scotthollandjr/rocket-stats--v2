@@ -10,7 +10,7 @@ class App extends Component {
         <div className="main">
           <nav>
             <div className="nav-link">
-              <NavLink to="/stats" exact={true} activeClassName="active">
+              <NavLink to="/stats" activeClassName="active">
                 <div className="outer-a left">
                   <div className="inner-a">
                     Stats
@@ -22,7 +22,7 @@ class App extends Component {
               <NavLink to="/form" exact={true} activeClassName="active">
                 <div className="outer-a right">
                   <div className="inner-a">
-                    FORM
+                    New Game
                   </div>
                 </div>
               </NavLink>

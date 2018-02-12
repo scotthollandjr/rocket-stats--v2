@@ -65,11 +65,12 @@ class ContainerComponent extends React.Component {
           <Switch>
             <Route path="/stats/games" render={()=><GameList
               teams={this.props.teams} players={this.props.players}
-              games={this.props.games}/>}/>
+              games={this.props.games} />}/>
             <Route path="/stats/teams" render={()=><TeamList
-              teams={this.props.teams} players={this.props.players}/>}/>
-            <Route path="/stats/players" render={()=><PlayerList players={this.props.players}/>}/>
-            <Redirect from="/stats" to="/stats/games" />
+              teams={this.props.teams} players={this.props.players} />}/>
+            <Route path="/stats/players" render={()=><PlayerList players={this.props.players}
+            games={this.props.games} />}/>
+            <Redirect from="/stats" to="/stats/players" />
           </Switch>
         </div>
       )
