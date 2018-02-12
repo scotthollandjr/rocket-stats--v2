@@ -6,6 +6,7 @@ import * as teamActions from '../../actions/teamActions';
 import { addGame } from '../../actions/addGameActions';
 import PropTypes from 'prop-types';
 import React from 'react';
+import './styles.scss';
 
 class GameFormComponent extends React.Component {
   constructor(props) {
