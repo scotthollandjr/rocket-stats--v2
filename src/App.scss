@@ -21,6 +21,7 @@ body {
   font-family: "Jura", Arial, Helvetica, sans-serif;
   max-width: 1000px;
   margin: 0px auto;
+  position: relative;
 
   a {
     color: white;
@@ -35,7 +36,7 @@ body {
 
     .nav-link {
       max-width: 250px;
-      
+
       a {
 
         .outer-a {
@@ -68,5 +69,14 @@ body {
         }
       }
     }
+  }
+
+  .title {
+    font-family: "Montserrat";
+    font-weight: 900;
+    position: absolute;
+    top: 7px;
+    right: 25px;
+    font-size: 57pt;
   }
 }

@@ -29,6 +29,9 @@ class App extends Component {
             </div>
           </nav>
         </div>
+        <div className="title">
+          ROCKET STATS
+        </div>
         <div>
           <Switch>
             <Route path="/stats" component={Container} />
