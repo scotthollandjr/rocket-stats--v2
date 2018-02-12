@@ -1,11 +1,16 @@
 import React from 'react';
+import './styles.scss';
 
 class TeamList extends React.Component {
 
   renderTeams(item, i) {
-    return <div key={i}>
-            <p>{item.name} ({this.props.players[item.players[0].id].name}, {this.props.players[item.players[1].id].name})</p>
-           </div>;
+    return (
+      <div key={i} className="team-card">
+        <div className="inner-card">
+          <div>{item.name} ({this.props.players[item.players[0].id].name}, {this.props.players[item.players[1].id].name})</div>
+        </div>
+      </div>
+    )
   }
 
   render() {
@@ -18,7 +23,7 @@ class TeamList extends React.Component {
     } else {
       return (
         <div>
-          <div>
+          <div className="card-container">
           {
             Object.keys(this.props.teams).map((team, i) => {
               return (
