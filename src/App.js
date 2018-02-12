@@ -7,6 +7,9 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <div className="title">
+          <span>ROCKET-</span><span> STATS</span>
+        </div>
         <div className="main">
           <nav>
             <div className="nav-link">
@@ -28,9 +31,6 @@ class App extends Component {
               </NavLink>
             </div>
           </nav>
-        </div>
-        <div className="title">
-          ROCKET STATS
         </div>
         <div>
           <Switch>

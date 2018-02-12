@@ -1,3 +1,5 @@
+@import 'mixins';
+
 body {
   margin: 0px;
   height: 100vh;
@@ -27,6 +29,12 @@ body {
     color: white;
     text-decoration: none;
     text-transform: uppercase;
+  }
+
+  .main {
+    @include mobile {
+      margin-top: 30px;
+    }
   }
 
   nav {
@@ -78,5 +86,17 @@ body {
     top: 7px;
     right: 25px;
     font-size: 57pt;
+    display: flex;
+    flex-direction: row;
+
+    @include mobile {
+      position: absolute;
+      font-size: 25pt;
+    }
+
+    @include tablet {
+      flex-direction: column;
+      font-size: 57pt;
+    }
   }
 }
