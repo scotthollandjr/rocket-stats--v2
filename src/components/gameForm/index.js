@@ -103,7 +103,8 @@ class GameFormComponent extends React.Component {
       let id2 = this.state.players[1].id;
       let teamId = '';
       for (let team of this.props.teams) {
-        if ((team.players.indexOf(id1) >= 0) && (team.players.indexOf(id2) >= 0)) {
+        let playerIds = [team.players[0].id, team.players[1].id];
+        if ((playerIds.indexOf(id1) >= 0) && (playerIds.indexOf(id2) >= 0)) {
           const newTeam1 = Object.assign({}, this.state.team_1, {
             id: team.id
           });
@@ -116,7 +117,8 @@ class GameFormComponent extends React.Component {
       let id2 = this.state.players[3].id;
       let teamId = '';
       for (let team of this.props.teams) {
-        if ((team.players.indexOf(id1) >= 0) && (team.players.indexOf(id2) >= 0)) {
+        let playerIds = [team.players[0].id, team.players[1].id];
+        if ((playerIds.indexOf(id1) >= 0) && (playerIds.indexOf(id2) >= 0)) {
           const newTeam2 = Object.assign({}, this.state.team_2, {
             id: team.id
           });
@@ -232,21 +234,21 @@ class GameFormComponent extends React.Component {
           </div>
           <div className="player-rows">
             <div className="team-name orange">
-              {this.props.teams[this.state.team_1.id] ? this.props.teams[this.state.team_1.id].name : 'Orange'}
+              {this.props.teams[this.state.team_2.id] ? this.props.teams[this.state.team_2.id].name : 'Orange'}
             </div>
             {this.state.players.filter(player => {
               return this.state.players.indexOf(player) >= 2
             }).map((player, playerIndex) => (
-              <div key={playerIndex} className="player-row orange">
+              <div key={playerIndex + 2} className="player-row orange">
                 <div className="photo-square">
                 </div>
                 <div className="select-square">
-                  <select value={player.id} onChange={this.handlePlayerChange(playerIndex, 'id')}>
+                  <select value={player.id} onChange={this.handlePlayerChange((playerIndex + 2), 'id')}>
                     <option>PLAYER</option>
                     {
                       Object.keys(this.props.players).map((i) => {
                         return (
-                          <option key={i + 1} value={this.props.players[i].id}>{this.props.players[i].name}</option>
+                          <option key={i} value={this.props.players[i].id}>{this.props.players[i].name}</option>
                         )
                       }, this)
                     }
@@ -259,7 +261,7 @@ class GameFormComponent extends React.Component {
                   type="number"
                   value={player.score}
                   placeholder="0"
-                  onChange={this.handlePlayerChange(playerIndex, 'score')}
+                  onChange={this.handlePlayerChange((playerIndex + 2), 'score')}
                   />
                 </div>
                 <div className="input-square">
@@ -268,16 +270,16 @@ class GameFormComponent extends React.Component {
                   type="number"
                   value={player.goals}
                   placeholder="0"
-                  onChange={this.handlePlayerChange(playerIndex, 'goals')}
+                  onChange={this.handlePlayerChange((playerIndex + 2), 'goals')}
                   />
                 </div>
                 <div className="input-square">
-                  <div className="label">number</div>
+                  <div className="label">assists</div>
                   <input
                   type="number"
                   value={player.assists}
                   placeholder="0"
-                  onChange={this.handlePlayerChange(playerIndex, 'assists')}
+                  onChange={this.handlePlayerChange((playerIndex + 2), 'assists')}
                   />
                 </div>
                 <div className="input-square">
@@ -286,7 +288,7 @@ class GameFormComponent extends React.Component {
                   type="number"
                   value={player.saves}
                   placeholder="0"
-                  onChange={this.handlePlayerChange(playerIndex, 'saves')}
+                  onChange={this.handlePlayerChange((playerIndex + 2), 'saves')}
                   />
                 </div>
                 <div className="input-square">
@@ -295,7 +297,7 @@ class GameFormComponent extends React.Component {
                   type="number"
                   value={player.shots}
                   placeholder="0"
-                  onChange={this.handlePlayerChange(playerIndex, 'shots')}
+                  onChange={this.handlePlayerChange((playerIndex + 2), 'shots')}
                   />
                 </div>
                 <div className="empty-square">

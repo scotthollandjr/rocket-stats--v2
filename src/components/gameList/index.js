@@ -136,7 +136,7 @@ class GameList extends React.Component {
         <div>
           <div>
           {
-            Object.keys(this.props.games).map((game, i) => {
+            Object.keys(this.props.games).reverse().map((game, i) => {
               return (
                 this.renderGames(this.props.games[game], i)
               )

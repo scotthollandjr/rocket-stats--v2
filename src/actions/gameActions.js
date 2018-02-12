@@ -23,7 +23,7 @@ function fetchGamesFulfilledAction(games) {
 export function fetchGames() {
   return dispatch => {
     dispatch(fetchGamesRequestedAction());
-    return database.ref('/games').once('value', snap => {
+    return database.ref('/games').limitToLast(10).once('value', snap => {
       const games = snap.val();
       dispatch(fetchGamesFulfilledAction(games))
     })
