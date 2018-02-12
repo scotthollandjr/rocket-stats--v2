@@ -98,6 +98,7 @@ form {
       text-transform: uppercase;
 
       @include mobile {
+        font-size: 14pt;
         width: calc(30%);
       }
 
@@ -110,6 +111,7 @@ form {
         font-size: 20pt;
         cursor: pointer;
         font-family: "Jura", Arial, Helvetica, sans-serif;
+        overflow: hidden;
 
         @include mobile {
           font-size: 14pt;
@@ -148,6 +150,10 @@ form {
       display: flex;
       justify-content: center;
       position: relative;
+
+      @include mobile {
+        font-size: 14pt;
+      }
 
       input {
         margin: 0px;
