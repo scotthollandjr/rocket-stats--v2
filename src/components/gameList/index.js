@@ -15,6 +15,9 @@ class GameList extends React.Component {
             <div className="select-square">
               {this.props.players[game.team_1.player_1.id].name}
             </div>
+            <div className="mvp-square">
+              <div className="mvp-icon"></div>
+            </div>
             <div className="input-square">
               <div className="label">score</div>
               {game.team_1.player_1.score}
@@ -42,6 +45,7 @@ class GameList extends React.Component {
             <div className="select-square">
               {this.props.players[game.team_1.player_2.id].name}
             </div>
+            <div className="mvp-square"></div>
             <div className="input-square">
               {game.team_1.player_2.score}
             </div>
@@ -69,6 +73,7 @@ class GameList extends React.Component {
             <div className="select-square">
               {this.props.players[game.team_2.player_1.id].name}
             </div>
+            <div className="mvp-square"></div>
             <div className="input-square">
               <div className="label">score</div>
               {game.team_2.player_1.score}
@@ -96,6 +101,7 @@ class GameList extends React.Component {
             <div className="select-square">
               {this.props.players[game.team_2.player_2.id].name}
             </div>
+            <div className="mvp-square"></div>
             <div className="input-square">
               {game.team_2.player_2.score}
             </div>

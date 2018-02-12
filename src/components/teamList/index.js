@@ -4,7 +4,7 @@ class TeamList extends React.Component {
 
   renderTeams(item, i) {
     return <div key={i}>
-            <p>{item.name} ({this.props.players[item.players[0]].name}, {this.props.players[item.players[1]].name})</p>
+            <p>{item.name} ({this.props.players[item.players[0].id].name}, {this.props.players[item.players[1].id].name})</p>
            </div>;
   }
 

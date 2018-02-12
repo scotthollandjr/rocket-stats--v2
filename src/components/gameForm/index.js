@@ -176,6 +176,9 @@ class GameFormComponent extends React.Component {
                     }
                   </select>
                 </div>
+                <div className="mvp-square">
+                  <div className="mvp-icon"></div>
+                </div>
                 <div className="input-square">
                   <div className="label">score</div>
                   <input
@@ -249,6 +252,7 @@ class GameFormComponent extends React.Component {
                     }
                   </select>
                 </div>
+                <div className="mvp-square"></div>
                 <div className="input-square">
                   <div className="label">score</div>
                   <input

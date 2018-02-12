@@ -35,6 +35,15 @@ class ContainerComponent extends React.Component {
         <div className="menu">
           <nav>
             <div className="nav-link">
+              <NavLink to="/stats/games" exact={true} activeClassName="active">
+                <div className="outer-a">
+                  <div className="inner-a">
+                    Games
+                  </div>
+                </div>
+              </NavLink>
+            </div>
+            <div className="nav-link">
               <NavLink to="/stats/teams" exact={true} activeClassName="active">
                 <div className="outer-a">
                   <div className="inner-a">
@@ -52,15 +61,6 @@ class ContainerComponent extends React.Component {
                 </div>
               </NavLink>
             </div>
-            <div className="nav-link">
-              <NavLink to="/stats/games" exact={true} activeClassName="active">
-                <div className="outer-a">
-                  <div className="inner-a">
-                    Games
-                  </div>
-                </div>
-              </NavLink>
-            </div>
           </nav>
           <Switch>
             <Route path="/stats/games" render={()=><GameList
@@ -70,7 +70,7 @@ class ContainerComponent extends React.Component {
               teams={this.props.teams} players={this.props.players} />}/>
             <Route path="/stats/players" render={()=><PlayerList players={this.props.players}
             games={this.props.games} />}/>
-            <Redirect from="/stats" to="/stats/players" />
+            <Redirect from="/stats" to="/stats/games" />
           </Switch>
         </div>
       )
