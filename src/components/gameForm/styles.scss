@@ -1,7 +1,11 @@
 @import '../../mixins';
 
 form {
-  margin-top: 139px;
+  margin-top: 40px;
+
+  @include tablet {
+    margin-top: 115px;
+  }
 
   @include mobile {
     margin-top: 50px;
@@ -128,6 +132,7 @@ form {
       display: flex;
       align-items: center;
       justify-content: flex-end;
+      position: relative;
 
       @include mobile {
         display: none;
@@ -139,6 +144,9 @@ form {
         background-size: contain;
         height: 30px;
         width: 30px;
+        position: absolute;
+        right: -5px;
+        top: 25%;
       }
     }
 

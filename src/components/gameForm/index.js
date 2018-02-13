@@ -143,8 +143,12 @@ class GameFormComponent extends React.Component {
   }
 
   handleSubmit() {
-    this.props.onAddGame(this.state.game)
+    this.props.onAddGame(this.state.game);
   }
+
+  // resetForm = () => {
+  //   document.getElementById("new-game-form").reset();
+  // }
 
   componentWillMount() {
     this.props.gameActions.fetchGames();
@@ -154,7 +158,7 @@ class GameFormComponent extends React.Component {
 
   render() {
     return (
-      <form onSubmit={this.buildGame}>
+      <form onSubmit={this.buildGame} id="new-game-form">
         <div className="game-container">
           <div className="player-rows">
             <div className="team-name blue">

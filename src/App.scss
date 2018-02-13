@@ -33,7 +33,7 @@ body {
 
   .main {
     @include mobile {
-      margin-top: 30px;
+      margin-top: 40px;
     }
   }
 
@@ -83,11 +83,12 @@ body {
     font-family: "Montserrat";
     font-weight: 900;
     position: absolute;
-    top: 10px;
+    top: 20px;
     right: 30px;
     font-size: 57pt;
     display: flex;
     flex-direction: row;
+    text-shadow: rgba(0, 0, 0, 0.5) -4px 5px 5px;
 
     @include mobile {
       position: absolute;
