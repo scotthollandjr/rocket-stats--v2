@@ -33,20 +33,19 @@ body {
 
   .main {
     @include mobile {
-      margin-top: 40px;
+      margin-top: 50px;
     }
   }
 
   nav {
     display: flex;
     flex-direction: column;
-    margin-bottom: 25px;
+    margin-bottom: 13px;
 
     .nav-link {
       max-width: 250px;
 
       a {
-
         .outer-a {
           width: 100%;
           background: rgba(20, 20, 20, 0.9);
@@ -77,6 +76,26 @@ body {
         }
       }
     }
+
+    &.sub-menu {
+      margin-bottom: 16px;
+
+      .nav-link {
+        max-width: 100px;
+        animation: slide-out 450ms forwards;
+      }
+    }
+
+    @keyframes slide-out {
+      0% {
+        max-width: 100px;
+        color: transparent;
+      }
+      100% {
+        max-width: 250px;
+        color: inherit;
+      }
+    }
   }
 
   .title {
@@ -84,20 +103,23 @@ body {
     font-weight: 900;
     position: absolute;
     top: 20px;
-    right: 30px;
+    left: 350px;
     font-size: 57pt;
     display: flex;
     flex-direction: row;
-    text-shadow: rgba(0, 0, 0, 0.5) -4px 5px 5px;
+    text-shadow: rgba(0, 0, 0, 0.3) -4px 5px 5px;
 
     @include mobile {
       position: absolute;
       font-size: 25pt;
+      left: unset;
+      right: 30px;
     }
 
     @include tablet {
       flex-direction: column;
       font-size: 57pt;
+      left: 335px;
     }
   }
 }

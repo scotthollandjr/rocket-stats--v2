@@ -33,7 +33,7 @@ class ContainerComponent extends React.Component {
     } else {
       return (
         <div className="menu">
-          <nav>
+          <nav className="sub-menu">
             <div className="nav-link">
               <NavLink to="/stats/games" exact={true} activeClassName="active">
                 <div className="outer-a">

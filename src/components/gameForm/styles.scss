@@ -4,11 +4,11 @@ form {
   margin-top: 40px;
 
   @include tablet {
-    margin-top: 115px;
+    margin-top: 140px;
   }
 
   @include mobile {
-    margin-top: 50px;
+    margin-top: 25px;
   }
 }
 
