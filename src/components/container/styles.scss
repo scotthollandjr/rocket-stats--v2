@@ -43,3 +43,60 @@
     }
   }
 }
+
+.loading {
+  font-size: 28pt;
+  margin-top: 125px;
+  color: #bae2ee;
+  font-weight: 100;
+  width: 175px;
+  display: flex;
+  flex-direction: row;
+  // text-align: right;
+
+  .text {
+    position: relative;
+  }
+
+  .spinner {
+    position: relative;
+    top: 18px;
+    left: 10px;
+
+    .spinner-node {
+      position: absolute;
+      width: 13px;
+      height: 13px;
+      background: #bae2ee;
+      border-radius: 50%;
+      animation: spin 2.4s linear infinite;
+
+      &:nth-child(1) {
+        animation-delay: 0s;
+      }
+
+      &:nth-child(2) {
+        animation-delay: 8s;
+      }
+
+      &:nth-child(3) {
+        animation-delay: 1.6s;
+      }
+    }
+  }
+
+  @keyframes spin {
+    0% {
+      transform-origin: 150% 50%;
+      transform: rotate(0);
+    }
+    50% {
+      transform-origin: 150% 50%;
+      transform: rotate(180deg);
+    }
+    100% {
+      transform-origin: 150% 50%;
+      transform: rotate(360deg);
+    }
+  }
+}

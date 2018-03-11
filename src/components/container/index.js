@@ -24,10 +24,16 @@ class ContainerComponent extends React.Component {
   calculateStats() {}
 
   render() {
-    if (!Object.keys(this.props.games).length || !Object.keys(this.props.players).length || !Object.keys(this.props.teams).length) {
+    // if (!Object.keys(this.props.games).length || !Object.keys(this.props.players).length || !Object.keys(this.props.teams).length) {
+    if (true) {
       return (
-        <div>
-          <div>Loading...</div>
+        <div className="loading">
+          <div className="text">LOADING</div>
+          <div className="spinner">
+            <div className="spinner-node one"></div>
+            <div className="spinner-node two"></div>
+            <div className="spinner-node three"></div>
+          </div>
         </div>
       )
     } else {
