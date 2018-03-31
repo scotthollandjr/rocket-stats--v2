@@ -4,6 +4,7 @@ import * as gameActions from '../../actions/gameActions';
 import * as playerActions from '../../actions/playerActions';
 import * as teamActions from '../../actions/teamActions';
 import { addGame } from '../../actions/addGameActions';
+import { updatePlayers } from '../../actions/updatePlayersActions';
 import PropTypes from 'prop-types';
 import React from 'react';
 import './styles.scss';
@@ -142,6 +143,7 @@ class GameFormComponent extends React.Component {
 
   handleSubmit() {
     this.props.onAddGame(this.state.game);
+    this.props.onUpdatePlayer(this.state.players);
   }
 
   // resetForm = () => {
@@ -338,6 +340,7 @@ function mapDispactToProps(dispatch) {
     playerActions: bindActionCreators(playerActions, dispatch),
     teamActions: bindActionCreators(teamActions, dispatch),
     onAddGame: (game) => dispatch(addGame(game)),
+    onUpdatePlayer: (players) => dispatch(updatePlayers(players)),
   };
 }
 

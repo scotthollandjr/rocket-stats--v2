@@ -7,7 +7,20 @@ class PlayerList extends React.Component {
     return (
       <div key={i} className="player-card">
         <div className="inner-card">
-          <div>{item.name}</div>
+          <div className="stat-row">
+            <div>
+              <div>{item.name}</div>
+              <div>assists: {item.assists}</div>
+              <div>goals: {item.goals}</div>
+              <div>mvps: {item.mvps}</div>
+            </div>
+            <div>
+              <div>saves: {item.saves}</div>
+              <div>score: {item.score}</div>
+              <div>shots: {item.shots}</div>
+              <div>wins: {item.wins}</div>
+            </div>
+          </div>
         </div>
       </div>
     )

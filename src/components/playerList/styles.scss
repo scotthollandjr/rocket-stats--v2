@@ -14,5 +14,10 @@
 
   .inner-card {
     padding: 25px;
+
+    .stat-row {
+      display: flex;
+      flex-direction: row;
+    }
   }
 }
