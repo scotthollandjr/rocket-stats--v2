@@ -6,14 +6,11 @@ import * as teamActions from '../../actions/teamActions';
 import { addGame } from '../../actions/addGameActions';
 import PropTypes from 'prop-types';
 import React from 'react';
-import { GameForm, GameList, PlayerList, TeamList } from '../index';
-import { Link, NavLink, Route, Redirect, Switch } from 'react-router-dom';
+import { GameList, PlayerList, TeamList } from '../index';
+import { NavLink, Route, Redirect, Switch } from 'react-router-dom';
 import './styles.scss';
 
 class ContainerComponent extends React.Component {
-  constructor(props) {
-    super(props);
-  }
 
   componentWillMount() {
     this.props.gameActions.fetchGames();
@@ -82,7 +79,6 @@ class ContainerComponent extends React.Component {
     }
   }
 }
-
 
 ContainerComponent.propTypes = {
   gameActions: PropTypes.object,

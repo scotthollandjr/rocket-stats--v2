@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Container, GameForm } from './components';
-import { Link, NavLink, Route, Redirect, Switch } from 'react-router-dom';
+import { NavLink, Route, Redirect, Switch } from 'react-router-dom';
 import './App.scss';
 
 class App extends Component {

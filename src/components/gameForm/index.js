@@ -87,7 +87,7 @@ class GameFormComponent extends React.Component {
   }
 
   handlePlayerChange = (i, key) => (event) => {
-    let value = event.target.value ? parseInt(event.target.value) : '';
+    let value = event.target.value ? parseInt(event.target.value, 10) : '';
     const newPlayers = this.state.players.map((player, si) => {
       if (i !== si) return player;
       return {...player, [key]: value};
@@ -101,7 +101,6 @@ class GameFormComponent extends React.Component {
     if ((this.state.players[0].id >= 0) && (this.state.players[1].id >= 0)) {
       let id1 = this.state.players[0].id;
       let id2 = this.state.players[1].id;
-      let teamId = '';
       for (let team of this.props.teams) {
         let playerIds = [team.players[0].id, team.players[1].id];
         if ((playerIds.indexOf(id1) >= 0) && (playerIds.indexOf(id2) >= 0)) {
@@ -115,7 +114,6 @@ class GameFormComponent extends React.Component {
     if ((this.state.players[2].id >= 0) && (this.state.players[3].id >= 0)) {
       let id1 = this.state.players[2].id;
       let id2 = this.state.players[3].id;
-      let teamId = '';
       for (let team of this.props.teams) {
         let playerIds = [team.players[0].id, team.players[1].id];
         if ((playerIds.indexOf(id1) >= 0) && (playerIds.indexOf(id2) >= 0)) {

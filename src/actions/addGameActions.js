@@ -24,15 +24,15 @@ function addGameRequestedAction() {
   };
 }
 
-function addGameRejectedAction() {
-  return {
-    type: actionTypes.ADD_GAME_REJECTED
-  }
-}
+// function addGameRejectedAction() {
+//   return {
+//     type: actionTypes.ADD_GAME_REJECTED
+//   }
+// }
 
-function addGameFulfilledAction(game) {
-  return {
-    type: actionTypes.ADD_GAME_FULFILLED,
-    game
-  };
-}
+// function addGameFulfilledAction(game) {
+//   return {
+//     type: actionTypes.ADD_GAME_FULFILLED,
+//     game
+//   };
+// }
