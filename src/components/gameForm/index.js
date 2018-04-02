@@ -94,8 +94,9 @@ class GameFormComponent extends React.Component {
       return {...player, [key]: value};
     });
 
-    this.setState({ players: newPlayers });
-    this.checkTeams();
+    this.setState({ players: newPlayers }, () => {
+      this.checkTeams()
+    });
   }
 
   checkTeams() {
@@ -188,47 +189,47 @@ class GameFormComponent extends React.Component {
                 <div className="input-square">
                   <div className="label">score</div>
                   <input
-                  type="number"
-                  value={player.score}
-                  placeholder="0"
-                  onChange={this.handlePlayerChange(playerIndex, 'score')}
-                  />
+                    type="number"
+                    value={player.score}
+                    placeholder="0"
+                    onChange={this.handlePlayerChange(playerIndex, 'score')}
+                    />
                 </div>
                 <div className="input-square">
                   <div className="label">goals</div>
                   <input
-                  type="number"
-                  value={player.goals}
-                  placeholder="0"
-                  onChange={this.handlePlayerChange(playerIndex, 'goals')}
-                  />
+                    type="number"
+                    value={player.goals}
+                    placeholder="0"
+                    onChange={this.handlePlayerChange(playerIndex, 'goals')}
+                    />
                 </div>
                 <div className="input-square">
                   <div className="label">assists</div>
                   <input
-                  type="number"
-                  value={player.assists}
-                  placeholder="0"
-                  onChange={this.handlePlayerChange(playerIndex, 'assists')}
-                  />
+                    type="number"
+                    value={player.assists}
+                    placeholder="0"
+                    onChange={this.handlePlayerChange(playerIndex, 'assists')}
+                    />
                 </div>
                 <div className="input-square">
                   <div className="label">saves</div>
                   <input
-                  type="number"
-                  value={player.saves}
-                  placeholder="0"
-                  onChange={this.handlePlayerChange(playerIndex, 'saves')}
-                  />
+                    type="number"
+                    value={player.saves}
+                    placeholder="0"
+                    onChange={this.handlePlayerChange(playerIndex, 'saves')}
+                    />
                 </div>
                 <div className="input-square">
                   <div className="label">shots</div>
                   <input
-                  type="number"
-                  value={player.shots}
-                  placeholder="0"
-                  onChange={this.handlePlayerChange(playerIndex, 'shots')}
-                  />
+                    type="number"
+                    value={player.shots}
+                    placeholder="0"
+                    onChange={this.handlePlayerChange(playerIndex, 'shots')}
+                    />
                 </div>
                 <div className="empty-square"></div>
                 <br />
@@ -262,47 +263,47 @@ class GameFormComponent extends React.Component {
                 <div className="input-square">
                   <div className="label">score</div>
                   <input
-                  type="number"
-                  value={player.score}
-                  placeholder="0"
-                  onChange={this.handlePlayerChange((playerIndex + 2), 'score')}
-                  />
+                    type="number"
+                    value={player.score}
+                    placeholder="0"
+                    onChange={this.handlePlayerChange((playerIndex + 2), 'score')}
+                    />
                 </div>
                 <div className="input-square">
                   <div className="label">goals</div>
                   <input
-                  type="number"
-                  value={player.goals}
-                  placeholder="0"
-                  onChange={this.handlePlayerChange((playerIndex + 2), 'goals')}
-                  />
+                    type="number"
+                    value={player.goals}
+                    placeholder="0"
+                    onChange={this.handlePlayerChange((playerIndex + 2), 'goals')}
+                    />
                 </div>
                 <div className="input-square">
                   <div className="label">assists</div>
                   <input
-                  type="number"
-                  value={player.assists}
-                  placeholder="0"
-                  onChange={this.handlePlayerChange((playerIndex + 2), 'assists')}
-                  />
+                    type="number"
+                    value={player.assists}
+                    placeholder="0"
+                    onChange={this.handlePlayerChange((playerIndex + 2), 'assists')}
+                    />
                 </div>
                 <div className="input-square">
                   <div className="label">saves</div>
                   <input
-                  type="number"
-                  value={player.saves}
-                  placeholder="0"
-                  onChange={this.handlePlayerChange((playerIndex + 2), 'saves')}
-                  />
+                    type="number"
+                    value={player.saves}
+                    placeholder="0"
+                    onChange={this.handlePlayerChange((playerIndex + 2), 'saves')}
+                    />
                 </div>
                 <div className="input-square">
                   <div className="label">shots</div>
                   <input
-                  type="number"
-                  value={player.shots}
-                  placeholder="0"
-                  onChange={this.handlePlayerChange((playerIndex + 2), 'shots')}
-                  />
+                    type="number"
+                    value={player.shots}
+                    placeholder="0"
+                    onChange={this.handlePlayerChange((playerIndex + 2), 'shots')}
+                    />
                 </div>
                 <div className="empty-square">
                 </div>
