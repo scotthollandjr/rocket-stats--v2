@@ -20,23 +20,23 @@ class GameList extends React.Component {
             </div>
             <div className="input-square">
               <div className="label">score</div>
-              {game.team_1.player_1.score}
+              {game.team_1.player_1.score | 0}
             </div>
             <div className="input-square">
               <div className="label">goals</div>
-              {game.team_1.player_1.goals}
+              {game.team_1.player_1.goals | 0}
             </div>
             <div className="input-square">
               <div className="label">assists</div>
-              {game.team_1.player_1.assists}
+              {game.team_1.player_1.assists | 0}
             </div>
             <div className="input-square">
               <div className="label">saves</div>
-              {game.team_1.player_1.saves}
+              {game.team_1.player_1.saves | 0}
             </div>
             <div className="input-square">
               <div className="label">shots</div>
-              {game.team_1.player_1.shots}
+              {game.team_1.player_1.shots | 0}
             </div>
             <div className="empty-square"></div>
           </div>
@@ -47,19 +47,19 @@ class GameList extends React.Component {
             </div>
             <div className="mvp-square"></div>
             <div className="input-square">
-              {game.team_1.player_2.score}
+              {game.team_1.player_2.score | 0}
             </div>
             <div className="input-square">
-              {game.team_1.player_2.goals}
+              {game.team_1.player_2.goals | 0}
             </div>
             <div className="input-square">
-              {game.team_1.player_2.assists}
+              {game.team_1.player_2.assists | 0}
             </div>
             <div className="input-square">
-              {game.team_1.player_2.saves}
+              {game.team_1.player_2.saves | 0}
             </div>
             <div className="input-square">
-              {game.team_1.player_2.shots}
+              {game.team_1.player_2.shots | 0}
             </div>
             <div className="empty-square"></div>
           </div>
@@ -76,23 +76,23 @@ class GameList extends React.Component {
             <div className="mvp-square"></div>
             <div className="input-square">
               <div className="label">score</div>
-              {game.team_2.player_1.score}
+              {game.team_2.player_1.score | 0}
             </div>
             <div className="input-square">
               <div className="label">goals</div>
-              {game.team_2.player_1.goals}
+              {game.team_2.player_1.goals | 0}
             </div>
             <div className="input-square">
               <div className="label">assists</div>
-              {game.team_2.player_1.assists}
+              {game.team_2.player_1.assists | 0}
             </div>
             <div className="input-square">
               <div className="label">saves</div>
-              {game.team_2.player_1.saves}
+              {game.team_2.player_1.saves | 0}
             </div>
             <div className="input-square">
               <div className="label">shots</div>
-              {game.team_2.player_1.shots}
+              {game.team_2.player_1.shots | 0}
             </div>
             <div className="empty-square"></div>
           </div>
@@ -103,19 +103,19 @@ class GameList extends React.Component {
             </div>
             <div className="mvp-square"></div>
             <div className="input-square">
-              {game.team_2.player_2.score}
+              {game.team_2.player_2.score | 0}
             </div>
             <div className="input-square">
-              {game.team_2.player_2.goals}
+              {game.team_2.player_2.goals | 0}
             </div>
             <div className="input-square">
-              {game.team_2.player_2.assists}
+              {game.team_2.player_2.assists | 0}
             </div>
             <div className="input-square">
-              {game.team_2.player_2.saves}
+              {game.team_2.player_2.saves | 0}
             </div>
             <div className="input-square">
-              {game.team_2.player_2.shots}
+              {game.team_2.player_2.shots | 0}
             </div>
             <div className="empty-square"></div>
           </div>

@@ -8,17 +8,27 @@ class PlayerList extends React.Component {
       <div key={i} className="player-card">
         <div className="inner-card">
           <div className="stat-row">
-            <div>
+            <div className="stat-col">
+              <div className="avatar-container">
+                <img src={item.avatar} className="avatar" />
+              </div>
               <div>{item.name}</div>
-              <div>assists: {item.assists}</div>
+            </div>
+            <div className="stat-col">
               <div>goals: {item.goals}</div>
+              <div>shots: {item.shots}</div>
+            </div>
+            <div className="stat-col">
+              <div>saves: {item.saves}</div>
+              <div>assists: {item.assists}</div>
+            </div>
+            <div className="stat-col">
+              <div>wins: {item.wins}</div>
               <div>mvps: {item.mvps}</div>
             </div>
-            <div>
-              <div>saves: {item.saves}</div>
+            <div className="stat-col">
               <div>score: {item.score}</div>
-              <div>shots: {item.shots}</div>
-              <div>wins: {item.wins}</div>
+              <div>overall: 100</div>
             </div>
           </div>
         </div>
