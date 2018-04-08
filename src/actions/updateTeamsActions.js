@@ -7,9 +7,9 @@ export function updateTeams(team_1, team_2) {
     const teams = [team_1, team_2]
     // LOOP THROUGH TEAMS
     for (let t in teams) {
-      console.log(teams)
       const teamUpdate = teams[t];
       const teamRef = database.ref('/teams/' + teamUpdate.id);
+      const playersRef = database.ref('/teams/' + teamUpdate.id + '/players/');
 
       const players = [teamUpdate.player_1, teamUpdate.player_2]
 
@@ -17,16 +17,12 @@ export function updateTeams(team_1, team_2) {
 // wins = snapshot.child("wins").val();
 // wins: wins + (playerUpdate.win ? 1 : 0)
 
-      console.log("teamRef", t, teamRef)
 
+      playersRef.once("value", function(snapshot) {
+        snapshot.forEach(function(playerSnapshot) {
+          let dbPlayer = playerSnapshot.val();
 
-      teamRef.once("value").then(function(snapshot) {
-        // console.log("snapshot", snapshot.child("players").val())
-
-        for (let p in players) {
-
-          let playerUpdate = players[p];
-          let dbPlayer = snapshot.child("players").child(playerUpdate.id).val();
+          let playerUpdate = players.find(p => p.id === dbPlayer.id);
 
           // SET BLANK STAT PLACEHOLDERS
           let assists = 0;
@@ -37,9 +33,6 @@ export function updateTeams(team_1, team_2) {
           let shots = 0;
 
           // GET CURRENT STATS FROM DB
-          console.log("snapshot", p, snapshot)
-          console.log("playerUpdate", p, playerUpdate)
-          console.log("dbPlayer", p, dbPlayer)
           assists = dbPlayer.assists;
           goals = dbPlayer.goals;
           mvps = dbPlayer.mvps;
@@ -54,7 +47,16 @@ export function updateTeams(team_1, team_2) {
           saves = saves + playerUpdate.saves;
           score = score + playerUpdate.score;
           shots = shots + playerUpdate.shots;
-        }
+
+          // players[playerSnapshot.key] = {
+          //   assists: assists,
+          //   goals: goals,
+          //   mvps: mvps,
+          //   saves: saves,
+          //   score: score,
+          //   shots: shots,
+          // }
+        })
       }).then(() => {
         teamRef.update({
           "players/0": teamUpdate.player_1,
