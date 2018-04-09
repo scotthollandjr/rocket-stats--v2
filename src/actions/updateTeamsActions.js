@@ -48,19 +48,23 @@ export function updateTeams(team_1, team_2) {
           score = score + playerUpdate.score;
           shots = shots + playerUpdate.shots;
 
-          // players[playerSnapshot.key] = {
-          //   assists: assists,
-          //   goals: goals,
-          //   mvps: mvps,
-          //   saves: saves,
-          //   score: score,
-          //   shots: shots,
-          // }
-        })
-      }).then(() => {
-        teamRef.update({
-          "players/0": teamUpdate.player_1,
-          "players/1": teamUpdate.player_2
+          let updatedPlayerData = {};
+
+          updatedPlayerData = {
+            assists: assists,
+            goals: goals,
+            mvps: mvps,
+            saves: saves,
+            score: score,
+            shots: shots,
+          }
+
+          playerSnapshot.ref.update(updatedPlayerData, function(error) {
+            console.log("updated?", updatedPlayerData)
+            if (error) {
+              console.log("Player update error", error);
+            }
+          });
         })
       });
     }
