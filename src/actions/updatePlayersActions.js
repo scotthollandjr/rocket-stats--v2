@@ -12,6 +12,7 @@ export function updatePlayers(players) {
 
       // SET BLANK STAT PLACEHOLDERS
       let assists = 0;
+      let games = 0;
       let goals = 0;
       let mvps = 0;
       let saves = 0;
@@ -22,6 +23,7 @@ export function updatePlayers(players) {
       // GET CURRENT STATS FROM DB
       playerRef.once("value").then(function(snapshot) {
         assists = snapshot.child("assists").val();
+        games = snapshot.child("games").val();
         goals = snapshot.child("goals").val();
         mvps = snapshot.child("mvps").val();
         saves = snapshot.child("saves").val();
@@ -32,6 +34,7 @@ export function updatePlayers(players) {
         // ADD CURRENT STATS TO NEW STATS
         playerRef.update({
           assists: assists + playerUpdate.assists,
+          games: games + 1,
           goals: goals + playerUpdate.goals,
           mvps: mvps + (playerUpdate.mvp ? 1 : 0),
           saves: saves + playerUpdate.saves,

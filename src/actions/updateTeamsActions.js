@@ -11,12 +11,7 @@ export function updateTeams(team_1, team_2) {
       const teamRef = database.ref('/teams/' + teamUpdate.id);
       const playersRef = database.ref('/teams/' + teamUpdate.id + '/players/');
 
-      const players = [teamUpdate.player_1, teamUpdate.player_2]
-
-// let wins = 0;
-// wins = snapshot.child("wins").val();
-// wins: wins + (playerUpdate.win ? 1 : 0)
-
+      const players = [teamUpdate.player_1, teamUpdate.player_2];
 
       playersRef.once("value", function(snapshot) {
         snapshot.forEach(function(playerSnapshot) {
@@ -60,11 +55,25 @@ export function updateTeams(team_1, team_2) {
           }
 
           playerSnapshot.ref.update(updatedPlayerData, function(error) {
-            console.log("updated?", updatedPlayerData)
             if (error) {
               console.log("Player update error", error);
             }
           });
+        })
+      });
+
+      let wins = 0;
+      let games = 0;
+
+      // GET CURRENT TEAM STATS FROM DB
+      teamRef.once("value").then(function(snapshot) {
+        wins = snapshot.child("wins").val();
+        games = snapshot.child("games").val();
+      }).then(function() {
+        // ADD TEAM STATS TO NEW STATS
+        teamRef.update({
+          wins: teamUpdate.win ? (wins + 1) : wins,
+          games: games + 1
         })
       });
     }
