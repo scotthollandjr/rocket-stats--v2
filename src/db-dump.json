@@ -1,10 +1,11 @@
 {
   "games" : {
-    "-L0mte-js_7aTlH5wO0A" : {
+    "-L9iAhAmp-Ckw8MDBcdq" : {
       "team_1" : {
         "id" : 11,
         "player_1" : {
           "assists" : 0,
+          "blue" : true,
           "goals" : 4,
           "id" : 5,
           "mvp" : true,
@@ -15,6 +16,7 @@
         },
         "player_2" : {
           "assists" : 2,
+          "blue" : true,
           "goals" : 2,
           "id" : 1,
           "mvp" : false,
@@ -29,6 +31,7 @@
         "id" : 8,
         "player_1" : {
           "assists" : 0,
+          "blue" : false,
           "goals" : 1,
           "id" : 4,
           "mvp" : false,
@@ -39,6 +42,7 @@
         },
         "player_2" : {
           "assists" : 0,
+          "blue" : false,
           "goals" : 0,
           "id" : 2,
           "mvp" : false,
@@ -50,11 +54,12 @@
         "win" : false
       }
     },
-    "-L0mte-js_7aTlH5wO0B" : {
+    "-L9iAvLzoxThgmBfMmEN" : {
       "team_1" : {
         "id" : 2,
         "player_1" : {
           "assists" : 1,
+          "blue" : true,
           "goals" : 4,
           "id" : 1,
           "mvp" : true,
@@ -65,6 +70,7 @@
         },
         "player_2" : {
           "assists" : 1,
+          "blue" : true,
           "goals" : 1,
           "id" : 2,
           "mvp" : false,
@@ -79,6 +85,7 @@
         "id" : 14,
         "player_1" : {
           "assists" : 1,
+          "blue" : false,
           "goals" : 3,
           "id" : 4,
           "mvp" : false,
@@ -89,6 +96,7 @@
         },
         "player_2" : {
           "assists" : 1,
+          "blue" : false,
           "goals" : 1,
           "id" : 5,
           "mvp" : false,
@@ -100,7 +108,7 @@
         "win" : false
       }
     },
-    "-L5BZdG8C8hYVCJhEVDo" : {
+    "-L9iB4q2CJ48v7N52Nnj" : {
       "team_1" : {
         "id" : 10,
         "player_1" : {
@@ -154,7 +162,7 @@
         "win" : false
       }
     },
-    "-L5B_4GNAc0uAgFS9TPY" : {
+    "-L9iBWv7K8OTH_wkwjvd" : {
       "team_1" : {
         "id" : 1,
         "player_1" : {
@@ -208,7 +216,7 @@
         "win" : false
       }
     },
-    "-L5BaRMVT-KfqvWqR9Tg" : {
+    "-L9iBf6Rvm1N1lIxVEL5" : {
       "team_1" : {
         "id" : 2,
         "player_1" : {
@@ -262,7 +270,7 @@
         "win" : false
       }
     },
-    "-L5BavmXyGvRBE25T6Dp" : {
+    "-L9iBoHYKviM6MV4dlEG" : {
       "team_1" : {
         "id" : 7,
         "player_1" : {
@@ -316,7 +324,7 @@
         "win" : false
       }
     },
-    "-L5BbAIsEK4WZhF7Kdpw" : {
+    "-L9iBy78N7tKxrYSk2oV" : {
       "team_1" : {
         "id" : 16,
         "player_1" : {
@@ -370,7 +378,7 @@
         "win" : false
       }
     },
-    "-L5BbeKMhg2Lz26ccitY" : {
+    "-L9iCA4FZDuWcbXmFFgm" : {
       "team_1" : {
         "id" : 11,
         "player_1" : {
@@ -424,7 +432,7 @@
         "win" : false
       }
     },
-    "-L5BbsP31gd3YfdhNpnn" : {
+    "-L9iCJiRYMvCB-Z1DR-n" : {
       "team_1" : {
         "id" : 16,
         "player_1" : {
@@ -478,7 +486,7 @@
         "win" : false
       }
     },
-    "-L5Bc92x1PHSnc4YdpV1" : {
+    "-L9iCW1iZ3jV4TA69SUE" : {
       "team_1" : {
         "id" : 14,
         "player_1" : {
@@ -506,7 +514,7 @@
         "win" : true
       },
       "team_2" : {
-        "id" : 7,
+        "id" : 16,
         "player_1" : {
           "assists" : 0,
           "blue" : false,
@@ -532,7 +540,7 @@
         "win" : false
       }
     },
-    "-L5BcYesQtZ3TRdeYSUo" : {
+    "-L9iCga3rosDpyS39pM6" : {
       "team_1" : {
         "id" : 7,
         "player_1" : {
@@ -586,7 +594,7 @@
         "win" : false
       }
     },
-    "-L5Bcig1Ghu3tmnD7S-0" : {
+    "-L9iCqWoZFHgyIbjZlnh" : {
       "team_1" : {
         "id" : 10,
         "player_1" : {
@@ -640,7 +648,7 @@
         "win" : false
       }
     },
-    "-L5Bcuso48kcemWIGZee" : {
+    "-L9iD1Tv2-nX80uhiRbY" : {
       "team_1" : {
         "id" : 0,
         "player_1" : {
@@ -694,7 +702,7 @@
         "win" : false
       }
     },
-    "-L5Bd62nEaI5oLzXhmob" : {
+    "-L9iDBZ8TdZP_3b37qoi" : {
       "team_1" : {
         "id" : 11,
         "player_1" : {
@@ -748,7 +756,7 @@
         "win" : false
       }
     },
-    "-L5V-kPOaAVmTXwpJPxk" : {
+    "-L9iDKWwkwedDIMxVrcY" : {
       "team_1" : {
         "id" : 0,
         "player_1" : {
@@ -802,7 +810,7 @@
         "win" : false
       }
     },
-    "-L5V-xqeDPKJNXGorG8z" : {
+    "-L9iDUjU5AVFJjVdrSY6" : {
       "team_1" : {
         "id" : 10,
         "player_1" : {
@@ -856,7 +864,7 @@
         "win" : false
       }
     },
-    "-L5V0GOOxx2VATrEv8i4" : {
+    "-L9iDewf_Z5hnKk-GutK" : {
       "team_1" : {
         "id" : 6,
         "player_1" : {
@@ -910,7 +918,7 @@
         "win" : false
       }
     },
-    "-L5V0T4hjjLYf6n7kW-c" : {
+    "-L9iDowxYg4dy9emFoDm" : {
       "team_1" : {
         "id" : 6,
         "player_1" : {
@@ -964,7 +972,7 @@
         "win" : false
       }
     },
-    "-L5V0br_cfD3J0-JyPqE" : {
+    "-L9iDyn5LN8EaK-aoJU6" : {
       "team_1" : {
         "id" : 14,
         "player_1" : {
@@ -1018,7 +1026,7 @@
         "win" : false
       }
     },
-    "-L5V0pe4CuzHetCvWYbN" : {
+    "-L9iE7CIHDb5mF1ykRUZ" : {
       "team_1" : {
         "id" : 0,
         "player_1" : {
@@ -1072,7 +1080,7 @@
         "win" : false
       }
     },
-    "-L5V12QIhXgoO1VKEt_s" : {
+    "-L9iEGPBfwktGltExEFV" : {
       "team_1" : {
         "id" : 11,
         "player_1" : {
@@ -1126,7 +1134,7 @@
         "win" : false
       }
     },
-    "-L5V1OCxlU_AHWOTwf6N" : {
+    "-L9iEPgxd5roKXhfYXqd" : {
       "team_1" : {
         "id" : 10,
         "player_1" : {
@@ -1182,92 +1190,93 @@
     }
   },
   "players" : [ {
-    "assists" : 0,
-    "avatar" : "https://imgur.com/RVIFhqh",
-    "goals" : 0,
+    "assists" : 8,
+    "avatar" : "https://imgur.com/RVIFhqh.png",
+    "games" : 12,
+    "goals" : 44,
     "id" : 0,
-    "mvps" : 0,
+    "mvps" : 9,
     "name" : "clayton",
-    "saves" : 0,
-    "score" : 0,
-    "shots" : 0,
-    "wins" : 0,
-    "games" : 0
+    "saves" : 5,
+    "score" : 5650,
+    "shots" : 70,
+    "wins" : 10
   }, {
-    "assists" : 0,
-    "avatar" : "https://imgur.com/m1jhc9S",
-    "goals" : 0,
+    "assists" : 15,
+    "avatar" : "https://imgur.com/m1jhc9S.png",
+    "games" : 20,
+    "goals" : 46,
     "id" : 1,
-    "mvps" : 0,
+    "mvps" : 7,
     "name" : "jeremy",
-    "saves" : 0,
-    "score" : 0,
-    "shots" : 0,
-    "wins" : 0,
-    "games" : 0
+    "saves" : 20,
+    "score" : 6910,
+    "shots" : 80,
+    "wins" : 13
   }, {
-    "assists" : 0,
-    "avatar" : "https://imgur.com/oeRao2O",
-    "goals" : 0,
+    "assists" : 6,
+    "avatar" : "https://imgur.com/oeRao2O.png",
+    "games" : 7,
+    "goals" : 4,
     "id" : 2,
     "mvps" : 0,
     "name" : "josh",
-    "saves" : 0,
-    "score" : 0,
-    "shots" : 0,
-    "wins" : 0,
-    "games" : 0
+    "saves" : 3,
+    "score" : 1000,
+    "shots" : 10,
+    "wins" : 3
   }, {
     "assists" : 0,
-    "avatar" : "https://imgur.com/hGu5uZT",
+    "avatar" : "https://imgur.com/hGu5uZT.png",
+    "games" : 5,
     "goals" : 0,
     "id" : 3,
     "mvps" : 0,
     "name" : "katie",
     "saves" : 0,
-    "score" : 0,
-    "shots" : 0,
-    "wins" : 0,
-    "games" : 0
+    "score" : 185,
+    "shots" : 1,
+    "wins" : 0
   }, {
-    "assists" : 0,
-    "avatar" : "https://imgur.com/9S6DSga",
-    "goals" : 0,
+    "assists" : 9,
+    "avatar" : "https://imgur.com/9S6DSga.png",
+    "games" : 19,
+    "goals" : 20,
     "id" : 4,
-    "mvps" : 0,
+    "mvps" : 3,
     "name" : "sasha",
-    "saves" : 0,
-    "score" : 0,
-    "shots" : 0,
-    "wins" : 0,
-    "games" : 0
+    "saves" : 11,
+    "score" : 4060,
+    "shots" : 41,
+    "wins" : 6
   }, {
-    "assists" : 0,
-    "avatar" : "https://imgur.com/OVcGcWX",
-    "goals" : 0,
+    "assists" : 12,
+    "avatar" : "https://imgur.com/OVcGcWX.png",
+    "games" : 20,
+    "goals" : 26,
     "id" : 5,
-    "mvps" : 0,
+    "mvps" : 3,
     "name" : "scott",
-    "saves" : 0,
-    "score" : 0,
-    "shots" : 0,
-    "wins" : 0,
-    "games" : 0
+    "saves" : 22,
+    "score" : 4955,
+    "shots" : 41,
+    "wins" : 10
   }, {
-    "assists" : 0,
-    "avatar" : "https://imgur.com/N3R9uc3",
-    "goals" : 0,
+    "assists" : 1,
+    "avatar" : "https://imgur.com/N3R9uc3.png",
+    "games" : 5,
+    "goals" : 6,
     "id" : 6,
     "mvps" : 0,
     "name" : "bot",
-    "saves" : 0,
-    "score" : 0,
-    "shots" : 0,
-    "wins" : 0,
-    "games" : 0
+    "saves" : 4,
+    "score" : 735,
+    "shots" : 14,
+    "wins" : 2
   }, {
     "assists" : 0,
-    "avatar" : "https://imgur.com/PBtsiRI",
+    "avatar" : "https://imgur.com/PBtsiRI.png",
+    "games" : 0,
     "goals" : 0,
     "id" : 7,
     "mvps" : 0,
@@ -1275,79 +1284,77 @@
     "saves" : 0,
     "score" : 0,
     "shots" : 0,
-    "wins" : 0,
-    "games" : 0
+    "wins" : 0
   } ],
   "teams" : [ {
+    "games" : 3,
     "id" : 0,
-    "wins" : 0,
-    "games" : 0,
     "name" : "Kanye Fresh",
     "players" : [ {
-      "assists" : 0,
-      "goals" : 0,
+      "assists" : 3,
+      "goals" : 14,
       "id" : 0,
-      "mvps" : 0,
-      "saves" : 0,
-      "score" : 0,
-      "shots" : 0
+      "mvps" : 3,
+      "saves" : 2,
+      "score" : 1740,
+      "shots" : 20
     }, {
-      "assists" : 0,
-      "goals" : 0,
+      "assists" : 6,
+      "goals" : 8,
       "id" : 1,
       "mvps" : 0,
       "saves" : 0,
-      "score" : 0,
-      "shots" : 0
-    } ]
+      "score" : 1155,
+      "shots" : 15
+    } ],
+    "wins" : 3
   }, {
+    "games" : 1,
     "id" : 1,
-    "wins" : 0,
-    "games" : 0,
     "name" : "Before it was cool",
     "players" : [ {
-      "assists" : 0,
-      "goals" : 0,
+      "assists" : 2,
+      "goals" : 2,
       "id" : 2,
       "mvps" : 0,
       "saves" : 0,
-      "score" : 0,
-      "shots" : 0
+      "score" : 250,
+      "shots" : 4
     }, {
-      "assists" : 0,
-      "goals" : 0,
+      "assists" : 2,
+      "goals" : 5,
       "id" : 0,
-      "mvps" : 0,
+      "mvps" : 1,
       "saves" : 0,
-      "score" : 0,
-      "shots" : 0
-    } ]
+      "score" : 600,
+      "shots" : 6
+    } ],
+    "wins" : 1
   }, {
+    "games" : 5,
     "id" : 2,
-    "wins" : 0,
-    "games" : 0,
     "name" : "Team Jorange",
     "players" : [ {
-      "assists" : 0,
-      "goals" : 0,
+      "assists" : 4,
+      "goals" : 2,
       "id" : 2,
       "mvps" : 0,
-      "saves" : 0,
-      "score" : 0,
-      "shots" : 0
+      "saves" : 3,
+      "score" : 675,
+      "shots" : 5
     }, {
-      "assists" : 0,
-      "goals" : 0,
+      "assists" : 2,
+      "goals" : 10,
       "id" : 1,
-      "mvps" : 0,
-      "saves" : 0,
-      "score" : 0,
-      "shots" : 0
-    } ]
+      "mvps" : 2,
+      "saves" : 2,
+      "score" : 1480,
+      "shots" : 18
+    } ],
+    "wins" : 2
   }, {
+    "games" : 1,
     "id" : 3,
-    "wins" : 0,
-    "games" : 0,
     "name" : "Drup Group",
     "players" : [ {
       "assists" : 0,
@@ -1355,21 +1362,21 @@
       "id" : 3,
       "mvps" : 0,
       "saves" : 0,
-      "score" : 0,
-      "shots" : 0
+      "score" : 55,
+      "shots" : 1
     }, {
       "assists" : 0,
-      "goals" : 0,
+      "goals" : 3,
       "id" : 0,
       "mvps" : 0,
-      "saves" : 0,
-      "score" : 0,
-      "shots" : 0
-    } ]
+      "saves" : 1,
+      "score" : 420,
+      "shots" : 6
+    } ],
+    "wins" : 0
   }, {
-    "id" : 4,
-    "wins" : 0,
     "games" : 0,
+    "id" : 4,
     "name" : "Los Judios Rojos",
     "players" : [ {
       "assists" : 0,
@@ -1387,11 +1394,11 @@
       "saves" : 0,
       "score" : 0,
       "shots" : 0
-    } ]
+    } ],
+    "wins" : 0
   }, {
-    "id" : 5,
-    "wins" : 0,
     "games" : 0,
+    "id" : 5,
     "name" : "Katie + Josh",
     "players" : [ {
       "assists" : 0,
@@ -1409,77 +1416,77 @@
       "saves" : 0,
       "score" : 0,
       "shots" : 0
-    } ]
+    } ],
+    "wins" : 0
   }, {
+    "games" : 3,
     "id" : 6,
-    "wins" : 0,
-    "games" : 0,
     "name" : "The Vultures",
     "players" : [ {
-      "assists" : 0,
-      "goals" : 0,
+      "assists" : 3,
+      "goals" : 2,
       "id" : 4,
-      "mvps" : 0,
-      "saves" : 0,
-      "score" : 0,
-      "shots" : 0
+      "mvps" : 1,
+      "saves" : 1,
+      "score" : 640,
+      "shots" : 7
     }, {
-      "assists" : 0,
-      "goals" : 0,
+      "assists" : 1,
+      "goals" : 9,
       "id" : 0,
-      "mvps" : 0,
+      "mvps" : 1,
       "saves" : 0,
-      "score" : 0,
-      "shots" : 0
-    } ]
+      "score" : 1130,
+      "shots" : 17
+    } ],
+    "wins" : 2
   }, {
+    "games" : 5,
     "id" : 7,
-    "wins" : 0,
-    "games" : 0,
     "name" : "Babushkas",
     "players" : [ {
-      "assists" : 0,
-      "goals" : 0,
+      "assists" : 2,
+      "goals" : 4,
       "id" : 4,
       "mvps" : 0,
       "saves" : 0,
-      "score" : 0,
-      "shots" : 0
+      "score" : 775,
+      "shots" : 8
     }, {
-      "assists" : 0,
-      "goals" : 0,
+      "assists" : 2,
+      "goals" : 11,
       "id" : 1,
-      "mvps" : 0,
-      "saves" : 0,
-      "score" : 0,
-      "shots" : 0
-    } ]
+      "mvps" : 2,
+      "saves" : 5,
+      "score" : 1625,
+      "shots" : 22
+    } ],
+    "wins" : 2
   }, {
+    "games" : 1,
     "id" : 8,
-    "wins" : 0,
-    "games" : 0,
     "name" : "Dangerous Dynamos",
     "players" : [ {
       "assists" : 0,
-      "goals" : 0,
+      "goals" : 1,
       "id" : 4,
       "mvps" : 0,
-      "saves" : 0,
-      "score" : 0,
-      "shots" : 0
+      "saves" : 1,
+      "score" : 180,
+      "shots" : 1
     }, {
       "assists" : 0,
       "goals" : 0,
       "id" : 2,
       "mvps" : 0,
       "saves" : 0,
-      "score" : 0,
-      "shots" : 0
-    } ]
+      "score" : 75,
+      "shots" : 1
+    } ],
+    "wins" : 0
   }, {
+    "games" : 1,
     "id" : 9,
-    "wins" : 0,
-    "games" : 0,
     "name" : "Michael Bubblies",
     "players" : [ {
       "assists" : 0,
@@ -1487,7 +1494,7 @@
       "id" : 4,
       "mvps" : 0,
       "saves" : 0,
-      "score" : 0,
+      "score" : 105,
       "shots" : 0
     }, {
       "assists" : 0,
@@ -1495,57 +1502,57 @@
       "id" : 3,
       "mvps" : 0,
       "saves" : 0,
-      "score" : 0,
+      "score" : 40,
       "shots" : 0
-    } ]
+    } ],
+    "wins" : 0
   }, {
+    "games" : 4,
     "id" : 10,
-    "wins" : 0,
-    "games" : 0,
     "name" : "Bash Bros",
     "players" : [ {
-      "assists" : 0,
-      "goals" : 0,
+      "assists" : 4,
+      "goals" : 4,
       "id" : 5,
       "mvps" : 0,
-      "saves" : 0,
-      "score" : 0,
-      "shots" : 0
+      "saves" : 3,
+      "score" : 765,
+      "shots" : 4
     }, {
-      "assists" : 0,
-      "goals" : 0,
+      "assists" : 2,
+      "goals" : 13,
       "id" : 0,
-      "mvps" : 0,
-      "saves" : 0,
-      "score" : 0,
-      "shots" : 0
-    } ]
+      "mvps" : 4,
+      "saves" : 2,
+      "score" : 1760,
+      "shots" : 21
+    } ],
+    "wins" : 4
   }, {
+    "games" : 4,
     "id" : 11,
-    "wins" : 0,
-    "games" : 0,
     "name" : "Team Tendies",
     "players" : [ {
-      "assists" : 0,
-      "goals" : 0,
+      "assists" : 4,
+      "goals" : 10,
       "id" : 5,
-      "mvps" : 0,
-      "saves" : 0,
-      "score" : 0,
-      "shots" : 0
+      "mvps" : 3,
+      "saves" : 5,
+      "score" : 1525,
+      "shots" : 13
     }, {
-      "assists" : 0,
-      "goals" : 0,
+      "assists" : 4,
+      "goals" : 11,
       "id" : 1,
-      "mvps" : 0,
-      "saves" : 0,
-      "score" : 0,
-      "shots" : 0
-    } ]
+      "mvps" : 1,
+      "saves" : 4,
+      "score" : 1430,
+      "shots" : 14
+    } ],
+    "wins" : 4
   }, {
-    "id" : 12,
-    "wins" : 0,
     "games" : 0,
+    "id" : 12,
     "name" : "Underdogs",
     "players" : [ {
       "assists" : 0,
@@ -1563,55 +1570,55 @@
       "saves" : 0,
       "score" : 0,
       "shots" : 0
-    } ]
+    } ],
+    "wins" : 0
   }, {
+    "games" : 3,
     "id" : 13,
-    "wins" : 0,
-    "games" : 0,
     "name" : "The Scott Holland Jr.'s",
     "players" : [ {
       "assists" : 0,
-      "goals" : 0,
+      "goals" : 3,
       "id" : 5,
       "mvps" : 0,
-      "saves" : 0,
-      "score" : 0,
-      "shots" : 0
+      "saves" : 8,
+      "score" : 910,
+      "shots" : 8
     }, {
       "assists" : 0,
       "goals" : 0,
       "id" : 3,
       "mvps" : 0,
       "saves" : 0,
-      "score" : 0,
+      "score" : 90,
       "shots" : 0
-    } ]
+    } ],
+    "wins" : 0
   }, {
+    "games" : 8,
     "id" : 14,
-    "wins" : 0,
-    "games" : 0,
     "name" : "PowurCoin (POWPP)",
     "players" : [ {
-      "assists" : 0,
-      "goals" : 0,
+      "assists" : 3,
+      "goals" : 8,
       "id" : 5,
       "mvps" : 0,
-      "saves" : 0,
-      "score" : 0,
-      "shots" : 0
+      "saves" : 6,
+      "score" : 1530,
+      "shots" : 13
     }, {
-      "assists" : 0,
-      "goals" : 0,
+      "assists" : 4,
+      "goals" : 13,
       "id" : 4,
-      "mvps" : 0,
-      "saves" : 0,
-      "score" : 0,
-      "shots" : 0
-    } ]
+      "mvps" : 2,
+      "saves" : 9,
+      "score" : 2250,
+      "shots" : 24
+    } ],
+    "wins" : 2
   }, {
-    "id" : 15,
-    "wins" : 0,
     "games" : 0,
+    "id" : 15,
     "name" : "Centice the Dentist",
     "players" : [ {
       "assists" : 0,
@@ -1629,33 +1636,33 @@
       "saves" : 0,
       "score" : 0,
       "shots" : 0
-    } ]
+    } ],
+    "wins" : 0
   }, {
+    "games" : 3,
     "id" : 16,
-    "wins" : 0,
-    "games" : 0,
     "name" : "Rajput",
     "players" : [ {
-      "assists" : 0,
-      "goals" : 0,
+      "assists" : 1,
+      "goals" : 6,
       "id" : 1,
-      "mvps" : 0,
-      "saves" : 0,
-      "score" : 0,
-      "shots" : 0
+      "mvps" : 2,
+      "saves" : 9,
+      "score" : 1220,
+      "shots" : 11
     }, {
-      "assists" : 0,
-      "goals" : 0,
+      "assists" : 1,
+      "goals" : 2,
       "id" : 6,
       "mvps" : 0,
-      "saves" : 0,
-      "score" : 0,
-      "shots" : 0
-    } ]
+      "saves" : 2,
+      "score" : 330,
+      "shots" : 7
+    } ],
+    "wins" : 2
   }, {
-    "id" : 17,
-    "wins" : 0,
     "games" : 0,
+    "id" : 17,
     "name" : "Josh + bot",
     "players" : [ {
       "assists" : 0,
@@ -1673,11 +1680,11 @@
       "saves" : 0,
       "score" : 0,
       "shots" : 0
-    } ]
+    } ],
+    "wins" : 0
   }, {
-    "id" : 18,
-    "wins" : 0,
     "games" : 0,
+    "id" : 18,
     "name" : "Katie + bot",
     "players" : [ {
       "assists" : 0,
@@ -1695,11 +1702,11 @@
       "saves" : 0,
       "score" : 0,
       "shots" : 0
-    } ]
+    } ],
+    "wins" : 0
   }, {
+    "games" : 1,
     "id" : 19,
-    "wins" : 0,
-    "games" : 0,
     "name" : "Sasha + bot",
     "players" : [ {
       "assists" : 0,
@@ -1707,43 +1714,43 @@
       "id" : 4,
       "mvps" : 0,
       "saves" : 0,
-      "score" : 0,
-      "shots" : 0
+      "score" : 110,
+      "shots" : 1
     }, {
       "assists" : 0,
-      "goals" : 0,
+      "goals" : 2,
       "id" : 6,
       "mvps" : 0,
       "saves" : 0,
-      "score" : 0,
-      "shots" : 0
-    } ]
+      "score" : 200,
+      "shots" : 5
+    } ],
+    "wins" : 0
   }, {
+    "games" : 1,
     "id" : 20,
-    "wins" : 0,
-    "games" : 0,
     "name" : "Myrtle, Inc.",
     "players" : [ {
-      "assists" : 0,
-      "goals" : 0,
+      "assists" : 1,
+      "goals" : 1,
       "id" : 5,
       "mvps" : 0,
       "saves" : 0,
-      "score" : 0,
-      "shots" : 0
+      "score" : 225,
+      "shots" : 3
     }, {
       "assists" : 0,
-      "goals" : 0,
+      "goals" : 2,
       "id" : 6,
       "mvps" : 0,
-      "saves" : 0,
-      "score" : 0,
-      "shots" : 0
-    } ]
+      "saves" : 2,
+      "score" : 205,
+      "shots" : 2
+    } ],
+    "wins" : 0
   }, {
-    "id" : 21,
-    "wins" : 0,
     "games" : 0,
+    "id" : 21,
     "name" : "Clayton + Intern",
     "players" : [ {
       "assists" : 0,
@@ -1761,11 +1768,11 @@
       "saves" : 0,
       "score" : 0,
       "shots" : 0
-    } ]
+    } ],
+    "wins" : 0
   }, {
-    "id" : 22,
-    "wins" : 0,
     "games" : 0,
+    "id" : 22,
     "name" : "Jeremy + Intern",
     "players" : [ {
       "assists" : 0,
@@ -1783,11 +1790,11 @@
       "saves" : 0,
       "score" : 0,
       "shots" : 0
-    } ]
+    } ],
+    "wins" : 0
   }, {
-    "id" : 23,
-    "wins" : 0,
     "games" : 0,
+    "id" : 23,
     "name" : "Josh + Intern",
     "players" : [ {
       "assists" : 0,
@@ -1805,11 +1812,11 @@
       "saves" : 0,
       "score" : 0,
       "shots" : 0
-    } ]
+    } ],
+    "wins" : 0
   }, {
-    "id" : 24,
-    "wins" : 0,
     "games" : 0,
+    "id" : 24,
     "name" : "Katie + Intern",
     "players" : [ {
       "assists" : 0,
@@ -1827,11 +1834,11 @@
       "saves" : 0,
       "score" : 0,
       "shots" : 0
-    } ]
+    } ],
+    "wins" : 0
   }, {
-    "id" : 25,
-    "wins" : 0,
     "games" : 0,
+    "id" : 25,
     "name" : "Sasha + Intern",
     "players" : [ {
       "assists" : 0,
@@ -1849,11 +1856,11 @@
       "saves" : 0,
       "score" : 0,
       "shots" : 0
-    } ]
+    } ],
+    "wins" : 0
   }, {
-    "id" : 26,
-    "wins" : 0,
     "games" : 0,
+    "id" : 26,
     "name" : "Scott + Intern",
     "players" : [ {
       "assists" : 0,
@@ -1871,11 +1878,11 @@
       "saves" : 0,
       "score" : 0,
       "shots" : 0
-    } ]
+    } ],
+    "wins" : 0
   }, {
-    "id" : 27,
-    "wins" : 0,
     "games" : 0,
+    "id" : 27,
     "name" : "Bot + Intern",
     "players" : [ {
       "assists" : 0,
@@ -1893,6 +1900,7 @@
       "saves" : 0,
       "score" : 0,
       "shots" : 0
-    } ]
+    } ],
+    "wins" : 0
   } ]
 }

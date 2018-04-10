@@ -172,6 +172,7 @@ class GameFormComponent extends React.Component {
             }).map((player, playerIndex) => (
               <div key={playerIndex} className="player-row blue">
                 <div className="photo-square">
+                  <img src={player.avatar} className="avatar" />
                 </div>
                 <div className="select-square">
                   <select value={player.id} onChange={this.handlePlayerChange(playerIndex, 'id')}>

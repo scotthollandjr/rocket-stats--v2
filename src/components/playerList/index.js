@@ -3,6 +3,10 @@ import './styles.scss';
 
 class PlayerList extends React.Component {
 
+  perGame(player, stat) {
+    return Math.round((player[stat] / player.games) * 100) / 100;
+  }
+
   renderPlayers(item, i) {
     return (
       <div key={i} className="player-card">
@@ -15,20 +19,20 @@ class PlayerList extends React.Component {
               <div>{item.name}</div>
             </div>
             <div className="stat-col">
-              <div>goals: {item.goals}</div>
-              <div>shots: {item.shots}</div>
+              <div>goals: {item.goals} ({this.perGame(item, 'goals')})</div>
+              <div>shots: {item.shots} ({this.perGame(item, 'shots')})</div>
             </div>
             <div className="stat-col">
-              <div>saves: {item.saves}</div>
-              <div>assists: {item.assists}</div>
+              <div>saves: {item.saves} ({this.perGame(item, 'saves')})</div>
+              <div>assists: {item.assists} ({this.perGame(item, 'assists')})</div>
             </div>
             <div className="stat-col">
-              <div>wins: {item.wins}</div>
-              <div>mvps: {item.mvps}</div>
+              <div>wins: {item.wins} ({this.perGame(item, 'wins')})</div>
+              <div>mvps: {item.mvps} ({this.perGame(item, 'mvps')})</div>
             </div>
             <div className="stat-col">
-              <div>score: {item.score}</div>
-              <div>overall: 100</div>
+              <div>score: {item.score} ({this.perGame(item, 'score')})</div>
+              <div>games: {item.games}</div>
             </div>
           </div>
         </div>
