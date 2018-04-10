@@ -21,6 +21,7 @@ class PlayerList extends React.Component {
             <div className="stat-col">
               <div>goals: {item.goals} ({this.perGame(item, 'goals')})</div>
               <div>shots: {item.shots} ({this.perGame(item, 'shots')})</div>
+              <div>accuracy: {Math.round((item.goals / item.shots) * 100) / 100}</div>
             </div>
             <div className="stat-col">
               <div>saves: {item.saves} ({this.perGame(item, 'saves')})</div>
