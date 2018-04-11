@@ -2,6 +2,29 @@ import React from 'react';
 import './styles.scss';
 
 class PlayerList extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      players: []
+    }
+    this.playerSort = this.playerSort.bind(this)
+  }
+
+  componentWillMount() {
+    this.setState({ players: this.props.players });
+  }
+
+  playerSort(key) {
+    let players = this.state.players;
+    if (key === "games") {
+      players.sort((a, b) => a[key] < b[key] ? 1 : -1);
+    } else if (key === "accuracy") {
+      players.sort((a, b) => (a.goals / a.shots) < (b.goals / b.shots) ? 1 : -1);
+    } else {
+      players.sort((a, b) => (a[key] / a.games) < (b[key] / b.games) ? 1 : -1);
+    }
+    this.setState({ players: players });
+  }
 
   perGame(player, stat) {
     return Math.round((player[stat] / player.games) * 100) / 100;
@@ -52,10 +75,20 @@ class PlayerList extends React.Component {
       return (
         <div>
           <div className="card-container">
+            <div>
+              <button onClick={() => this.playerSort("games")}>games</button>
+              <button onClick={() => this.playerSort("score")}>score</button>
+              <button onClick={() => this.playerSort("assists")}>assists</button>
+              <button onClick={() => this.playerSort("saves")}>saves</button>
+              <button onClick={() => this.playerSort("shots")}>shots</button>
+              <button onClick={() => this.playerSort("wins")}>wins</button>
+              <button onClick={() => this.playerSort("mvps")}>mvps</button>
+              <button onClick={() => this.playerSort("accuracy")}>accuracy</button>
+            </div>
             {
-              Object.keys(this.props.players).map((player, i) => {
+              Object.keys(this.state.players).map((player, i) => {
                 return (
-                  this.renderPlayers(this.props.players[player], i)
+                  this.renderPlayers(this.state.players[player], i)
                 )
               }, this)
             }
