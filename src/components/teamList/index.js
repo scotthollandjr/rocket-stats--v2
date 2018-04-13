@@ -2,17 +2,38 @@ import React from 'react';
 import './styles.scss';
 
 class TeamList extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      teams: []
+    }
+    this.teamSort = this.teamSort.bind(this)
+  }
+
+  componentWillMount() {
+    this.setState({ teams: this.props.teams }, function() {
+      this.teamSort("wins");
+    });
+  }
+
+  teamSort(key) {
+    let teams = this.state.teams;
+    teams.sort((a, b) => (a[key] / a.games) < (b[key] / b.games) ? 1 : -1);
+    this.setState({ teams: teams });
+  }
 
   renderTeams(item, i) {
     return (
-      <div key={i} className="team-card">
+      item.games ? 
+      <div key={i} className="team-card" >
         <div className="inner-card">
           <div>{item.name} ({this.props.players[item.players[0].id].name}, {this.props.players[item.players[1].id].name})</div>
           <div>wins: {item.wins | 0} ({Math.round((item.wins / item.games) * 100)}%)</div>
-          <div>{item.players[0].name}: {item.players[0].score | 0}</div>
-          <div>{item.players[1].name}: {item.players[1].score | 0}</div>
+          <div>{this.props.players[item.players[0].id].name}: {item.players[0].score | 0}</div>
+          <div>{this.props.players[item.players[1].id].name}: {item.players[1].score | 0}</div>
         </div>
       </div>
+      : null
     )
   }
 
@@ -28,9 +49,9 @@ class TeamList extends React.Component {
         <div>
           <div className="card-container">
           {
-            Object.keys(this.props.teams).map((team, i) => {
+            Object.keys(this.state.teams).map((team, i) => {
               return (
-                this.renderTeams(this.props.teams[team], i)
+                this.renderTeams(this.state.teams[team], i)
               )
             }, this)
           }
