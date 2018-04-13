@@ -28,12 +28,12 @@ export function updateTeams(team_1, team_2) {
           let shots = 0;
 
           // GET CURRENT STATS FROM DB
-          assists = dbPlayer.assists;
-          goals = dbPlayer.goals;
-          mvps = dbPlayer.mvps;
-          saves = dbPlayer.saves;
-          score = dbPlayer.score;
-          shots = dbPlayer.shots;
+          assists = parseInt(dbPlayer.assists);
+          goals = parseInt(dbPlayer.goals);
+          mvps = parseInt(dbPlayer.mvps);
+          saves = parseInt(dbPlayer.saves);
+          score = parseInt(dbPlayer.score);
+          shots = parseInt(dbPlayer.shots);
 
           // ADD CURRENT STATS TO NEW STATS
           assists = assists + playerUpdate.assists;

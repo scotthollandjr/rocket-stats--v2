@@ -22,14 +22,14 @@ export function updatePlayers(players) {
 
       // GET CURRENT STATS FROM DB
       playerRef.once("value").then(function(snapshot) {
-        assists = snapshot.child("assists").val();
-        games = snapshot.child("games").val();
-        goals = snapshot.child("goals").val();
-        mvps = snapshot.child("mvps").val();
-        saves = snapshot.child("saves").val();
-        score = snapshot.child("score").val();
-        shots = snapshot.child("shots").val();
-        wins = snapshot.child("wins").val();
+        assists = parseInt(snapshot.child("assists").val());
+        games = parseInt(snapshot.child("games").val());
+        goals = parseInt(snapshot.child("goals").val());
+        mvps = parseInt(snapshot.child("mvps").val());
+        saves = parseInt(snapshot.child("saves").val());
+        score = parseInt(snapshot.child("score").val());
+        shots = parseInt(snapshot.child("shots").val());
+        wins = parseInt(snapshot.child("wins").val());
       }).then(function() {
         // ADD CURRENT STATS TO NEW STATS
         playerRef.update({
