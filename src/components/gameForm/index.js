@@ -387,7 +387,7 @@ class GameFormComponent extends React.Component {
           </div>
         </div>
         <div className="button-container">
-          <input className="submit-button" type="submit" value="submit" />
+          <input disabled className="submit-button" type="submit" value="submit" />
         </div>
       </form>
     )
