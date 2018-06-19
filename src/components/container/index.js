@@ -45,7 +45,7 @@ class ContainerComponent extends React.Component {
                 </div>
               </NavLink>
             </div>
-            <div className="nav-link">
+            {/*<div className="nav-link">
               <NavLink to="/stats/teams" exact={true} activeClassName="active">
                 <div className="outer-a">
                   <div className="inner-a">
@@ -53,7 +53,7 @@ class ContainerComponent extends React.Component {
                   </div>
                 </div>
               </NavLink>
-            </div>
+            </div>*/}
             <div className="nav-link">
               <NavLink to="/stats/players" exact={true} activeClassName="active">
                 <div className="outer-a">

@@ -147,11 +147,81 @@ class GameFormComponent extends React.Component {
     this.props.onAddGame(this.state.game);
     this.props.onUpdatePlayers(this.state.players);
     this.props.onUpdateTeams(this.state.team_1, this.state.team_2);
+    this.resetForm();
   }
 
-  // resetForm = () => {
-  //   document.getElementById("new-game-form").reset();
-  // }
+  resetForm = () => {
+    this.state = {
+      game: {
+        team_1: {
+          player_1: {},
+          player_2: {}
+        },
+        team_2: {
+          player_1: {},
+          player_2: {}
+        }
+      },
+      team_1: {
+        id: undefined,
+        win: true,
+        player_1: {},
+        player_2: {}
+      },
+      team_2: {
+        id: undefined,
+        win: false,
+        player_1: {},
+        player_2: {}
+      },
+      players: [
+        {
+          assists: '',
+          goals: '',
+          id: undefined,
+          mvp: true,
+          saves: '',
+          score: '',
+          shots: '',
+          win: true,
+          blue: true
+        },
+        {
+          assists: '',
+          goals: '',
+          id: undefined,
+          mvp: false,
+          saves: '',
+          score: '',
+          shots: '',
+          win: true,
+          blue: true
+        },
+        {
+          assists: '',
+          goals: '',
+          id: undefined,
+          mvp: false,
+          saves: '',
+          score: '',
+          shots: '',
+          win: false,
+          blue: false
+        },
+        {
+          assists: '',
+          goals: '',
+          id: undefined,
+          mvp: false,
+          saves: '',
+          score: '',
+          shots: '',
+          win: false,
+          blue: false
+        }
+      ]
+    };
+  }
 
   componentWillMount() {
     this.props.gameActions.fetchGames();
