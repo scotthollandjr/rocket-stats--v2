@@ -1,6 +1,6 @@
 # [rocket-stats v2](http://rocketpla.net/)
 
-A web app built to track and catalog 2v2 games of Rocket League. Add games to the database, view recent games, and compare the scores of all teams and players. Built in React, with a simple Firebase database, and hosted on GitHub Pages at [rocketpla.net](http://rocketpla.net/).
+A web app built to track and catalog 2v2 games of Rocket League. Add games to the database, view recent games, and compare the scores of all teams and players. Built in React, with a simple Firebase database.
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
